@@ -1,4 +1,7 @@
 
+body{
+    box-sizing: border-box;
+}
 main {
     width: 100%;
 }
@@ -11,4 +14,32 @@ main .banner {
     display: flex;
     align-items: center;
     justify-content: center;
+}
+.titulo {
+    text-align: center;
+    color: #fff;
+    font-size: 44px;
+    padding-top: 20px;
+}
+.subtitulo {
+    color: #fff;
+    font-size: 22px;
+    text-align: center;
+    font-weight: 100;
+    padding-bottom: 40px;
+}
+.container2 {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.texto {
+    width: 40%;
+    color: #fff;
+    font-size: 18px;
+}
+.img-nba {
+    padding-left: 50px;
+    width: 200px;
 }
