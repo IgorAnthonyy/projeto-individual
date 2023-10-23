@@ -1,11 +1,16 @@
 *{
     margin: 0;
     padding: 0;
-    font-family: Arial, Helvetica, sans-serif;
+    font-family: 'Roboto Condensed', sans-serif;
 }
+body{
+    background-color: #303030;
+}
+
 .cabecalho {
+    background-color: #303030;
     top: 0;
-    position: fixed;
+    position: sticky;
     width: 100%;
     box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px, rgba(60, 64, 67, 0.15) 0px 1px 3px 1px;
 }
@@ -21,14 +26,14 @@
 }
 .cabecalho-navbar ul li a {
     text-decoration: none;
-    color: #303030;
+    color: #ffffff;
     margin-left: 20px;
 }
 .cl {
     text-decoration: none;
 }
 .cadastroElogin .cadastro {
-    color: #303030;
+    color: #ffffff;
     margin-right: 20px;
 }
 .cadastroElogin .login {
@@ -36,4 +41,11 @@
     padding: 10px 30px;
     color: #fff;
     border-radius: 5px;
+}
+.logo img {
+    width: 150px;
+    padding: 15px;
+}
+.cabecalho-navbar ul li a:hover {
+    border-bottom: 4px solid orangered;
 }
