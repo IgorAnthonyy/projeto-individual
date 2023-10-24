@@ -1,0 +1,45 @@
+main{
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.cadastroBox{
+    text-align: center;
+    width: 350px;
+    background-color: #686868;
+    padding: 20px;
+    color: #fff;
+}
+.inputs input {
+    width: 330px;
+    font-size: 18px;
+    padding: 8px 3px;
+    margin-bottom: 10px;
+}
+.inputs input::placeholder {
+    padding-left: 10px;
+}
+.cadastroBox h2 {
+    font-size: 44px;
+    margin-bottom: 30px;
+}
+.inputs p {
+    text-align: left;
+}
+.cadastroBox button{
+    margin-top: 10px;
+    cursor: pointer;
+    padding: 10px;
+    background-color: #ff7637;
+    border: none;
+    font-size: 20px;
+    color: #fff;
+    font-weight: bold;
+    width: 100%;
+    transition: 0.5s;
+}
+.cadastroBox button:hover {
+    background-color: #fff;
+    color: #ff7637;
+}
