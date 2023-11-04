@@ -6,38 +6,45 @@ main {
     width: 100%;
 }
 main .banner {
-    background-image: url(https://apexensino.com.br/wp-content/uploads/2020/06/aprender-a-programar.png);
+    background-image: url(https://itstep.com.br/dist/images/courses-adult/rpo-new-2/main-new1.png);
     background-repeat: no-repeat;
     background-size: cover;
-    background-position: 10px;
+    background-position: center;
     width: 100%;
     height: 520px;
 }
 .titulo {
-    text-align: center;
-    color: #fff;
     font-size: 44px;
-    padding-top: 20px;
-}
-.subtitulo {
-    color: #fff;
-    font-size: 22px;
+    color: #0097B2;
     text-align: center;
-    font-weight: 100;
-    padding-bottom: 40px;
+    padding: 30px 0;
 }
-.container2 {
-    width: 100%;
+.containerTextos, .containerImportancia{
+    width: 60%;
+    margin: 0 auto;
     display: flex;
     align-items: center;
-    justify-content: center;
+    padding-bottom: 70px;
 }
 .texto {
-    width: 40%;
-    color: #fff;
-    font-size: 18px;
+    font-size: 23px;
+    color: #616161;
 }
-.img-nba {
-    padding-left: 50px;
-    width: 200px;
+.containerLinguagens{
+    width: 60%;
+    margin: 0 auto;
+    padding-bottom: 70px;
+
+}
+.cardLinguagens {
+    display: flex;
+    align-items: center;
+    padding-bottom: 30px;
+}
+.cardLinguagens p{
+    width: 90%;
+}
+.cardLinguagens .bx {
+    font-size: 100px;
+    color: #0097B2;
 }

@@ -1,0 +1,38 @@
+footer{
+    background-color: #0097B2;
+    width: 100%;
+}
+footer .container {
+    width: 80%;
+    margin: 0 auto;
+    padding: 20px;
+    display: flex;
+    gap: 10%;
+}
+.footerTitulo{
+    padding-bottom: 10px;
+    color: #fff;
+    font-weight: 800;
+    font-size: 20px;
+}
+.bxl-instagram {
+    color: #fff;
+    font-size: 30px;
+    padding-bottom: 10px;
+}
+.footerTexto {
+    color: #fff;
+    font-size: 18px;
+}
+.navegar ul li {
+    list-style: none;
+    padding-bottom: 10px;
+}
+.navegar ul li a{
+    text-decoration: none;
+    color: #fff;
+}
+footer img {
+    width: 100px;
+    height: 70px;
+}

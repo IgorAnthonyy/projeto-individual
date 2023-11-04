@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <link rel="icon" href="./img/CodeCraft-removebg-preview.png">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./css/header.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="stylesheet" href="./css/quizHTML.css">
+    <link rel="stylesheet" href="./css/footer.css">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Condensed:wght@100;400;800&display=swap" rel="stylesheet">
+    <title>CodeCraft - login</title>
+</head>
+<body>
+    <header class="cabecalho">
+        <div class="container">
+            <div class="logo">
+                <img src="./img/CodeCraft-removebg-preview.png" alt="">
+            </div>
+            <nav class="cabecalho-navbar">
+                <ul>
+                    <li><a href="./index.html">HOME</a></li>
+                    <li><a href="#">PROGRAMAÇÃO</a></li>
+                    <li><a href="./quiz.html">QUIZ</a></li>
+                    <li><a href="#">SOBRE NÓS</a></li>
+                </ul>
+            </nav>
+            <div class="cadastroElogin">
+                <a class="cl cadastro" href="./cadastro.html">Cadastro</a>
+                <a class="cl login" href="./login.html">Login</a>
+            </div>
+        </div>
+    </header>
+    <main>
+        <form id="quiz-form">
+            <div class="boxQuiz">
+                <p>Como que todo código de HTML começa?</p>
+                <input type="radio" name="q1" value="errado"><label>< head > </ head ></label><br>
+                <input type="radio" name="q1" value="errado"><label>< ! DOCTYPE html ></label><br>
+                <input type="radio" name="q1" value="certo"><label>< html ></ html ></label><br>
+            </div>
+            <div class="boxQuiz">
+                <p>Qual tag que defini o título de uma página em HTML?</p>
+                <input type="radio" name="q2" value="certo"><label>< titulo ></ titulo ></label><br>
+                <input type="radio" name="q2" value="errado"><label>< name ></ name ></label><br>
+                <input type="radio" name="q2" value="errado"><label>< page ></ page > </label><br>
+            </div>
+            <div class="boxQuiz">
+                <p>Para que serve a tag < head ></ head >?</p>
+                <input type="radio" name="q3" value="errado"><label>Para nomerar o website.</label><br>
+                <input type="radio" name="q3" value="certo"><label>Para adicionar coisas na cabeça do Website.</label><br>
+                <input type="radio" name="q3" value="errado"><label>Para trocar a cor.</label><br>
+            </div>
+            <div class="boxQuiz">
+                <p>O que significa a sigla "HTML"?</p>
+                <input type="radio" name="q4" value="certo"><label>"HTML" significa "Hypertext Markup Language" (Linguagem de Marcação de Hipertexto).</label><br>
+                <input type="radio" name="q4" value="errado"><label>"HTML" significa "History marketing Language".</label><br>
+                <input type="radio" name="q4" value="errado"><label>Nenhuma das alternativass.</label><br>
+            </div>
+            <div class="boxQuiz">
+                <p>Qual elemento HTML é usado para criar uma hiperligação?</p>
+                <input type="radio" name="q5" value="errado"><label>O elemento < a > é usado para alterar o texto.</label><br>
+                <input type="radio" name="q5" value="certo"><label>O elemento < a > é usado para criar hiperligações (links).</label><br>
+                <input type="radio" name="q5" value="errado"><label>O elemento < a > é utilizado para criar tabelas.</label><br>
+            </div>
+            <div class="boxQuiz">
+                <p>Qual tag HTML é usada para criar uma lista não ordenada?</p>
+                <input type="radio" name="q6" value="errado"><label>< main ></ main ><br>
+                <input type="radio" name="q6" value="errado"><label>< p ></ p ><br>
+                <input type="radio" name="q6" value="certo"><label>< ul ></ ul ></label><br>
+            </div>
+            <div class="boxQuiz">
+                <p>Qual é o elemento HTML usado para criar um formulário?</p>
+                <input type="radio" name="q7" value="errado"><label>< section ></ section ></label><br>
+                <input type="radio" name="q7" value="errado"><label>< div ></ div ></label><br>
+                <input type="radio" name="q7" value="certo"><label>< form ></ form ></label><br>
+            </div>
+            <div class="boxQuiz">
+                <p>Qual tag HTML é usada para marcar um cabeçalho de nível 1?</p>
+                <input type="radio" name="q8" value="certo"><label>< h1 ></ h1 ></label><br>
+                <input type="radio" name="q8" value="errado"><label>< header ></ header ></label><br>
+                <input type="radio" name="q8" value="errado"><label>< nav ></ nav ></label><br>
+            </div>
+            <div class="boxQuiz">
+                <p>Qual tag HTML é utilziada para inserir imagens?</p>
+                <input type="radio" name="q9" value="certo"><label>< img ></label><br>
+                <input type="radio" name="q9" value="errado"><label>< footer ></ footer ></label><br>
+                <input type="radio" name="q9" value="errado"><label>< meta ></label><br>
+            </div>
+            <div class="boxQuiz">
+
+                <input type="submit" class="buttonEnviar" value="Enviar Respostas">
+            </div>
+        </form>
+        <p id="resultado"></p>
+      </main>
+    <footer>
+        <div class="container">
+             <img src="./img/CodeCraft__2_-removebg-preview.png" alt="">
+             <div class="navegar">
+                 <p class="footerTitulo">Navegação</p>
+                 <ul>
+                     <li><a href="./index.html">HOME</a></li>
+                     <li><a href="#">PROGRAMAÇÃO</a></li>
+                     <li><a href="#">QUIZ</a></li>
+                     <li><a href="#">SOBRE NÓS</a></li>
+                 </ul>
+             </div>
+             <div class="contato">
+                 <p class="footerTitulo">Contato</p>
+                 <i class='bx bxl-instagram'></i>
+                 <p class="footerTexto">codecraft@gmail.com</p>
+             </div>
+        </div>
+     </footer>
+     <script>
+        const quizForm = document.getElementById("quiz-form");
+        const boxQuiz = document.querySelector(".boxQuiz");
+        const resultado = document.getElementById("resultado");
+        
+        quizForm.addEventListener("submit", function (e) {
+            e.preventDefault();
+            const respostas = quizForm.elements;
+            
+            let acertos = 0;
+            
+            for (let i = 0; i < respostas.length; i++) {
+                const resposta = respostas[i];
+                if (resposta.type === "radio" && resposta.checked && resposta.value === "certo") {
+                    acertos++;
+                }
+            }
+            quizForm.style.display = 'none'
+
+            if(acertos >= 5){
+                resultado.innerHTML = `Você acertou ${acertos} de 9 perguntas.`;
+            }else {
+                resultado.innerHTML = `Você acertou ${acertos} de 9 perguntas.<br><br> Da para melhorar. <br><br> Recarregue a página e faça novamente.`;
+            }
+        });
+    </script>
+</body>
+</html>

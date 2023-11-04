@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="./css/header.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="stylesheet" href="./css/footer.css">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link rel="stylesheet" href="./css/cadastro.css">
     <link href="https://fonts.googleapis.com/css2?family=Roboto+Condensed:wght@100;400;800&display=swap" rel="stylesheet">
@@ -21,7 +22,7 @@
                 <ul>
                     <li><a href="./index.html">HOME</a></li>
                     <li><a href="#">PROGRAMAÇÃO</a></li>
-                    <li><a href="#">QUIZ</a></li>
+                    <li><a href="./quiz.html">QUIZ</a></li>
                     <li><a href="#">SOBRE NÓS</a></li>
                 </ul>
             </nav>
@@ -37,16 +38,89 @@
             <h2>Cadastro</h2>
             <div class="inputs">
                 <p>E-mail:</p>
-                <input type="email" placeholder="email@email.email">
+                <input type="email" id="iptEmail" placeholder="email@email.email">
+                <div class="mensagemErro" id="erroEmail" style="display: none;">
+                    E-mail inválido <br>
+                  </div>
                 <p>Senha:</p>
-                <input type="password" placeholder="senha">
+                <input type="password" id="iptSenha" placeholder="senha">
+                <div class="mensagemErro" id="erroSenha" style="display: none;">
+                    Insira uma senha com pelo menos 8 dígitos <br>
+                    A senha deve ter pelo menos 1 caractere especial <br>
+                    A senha deve ter pelo menos uma letra maiúscula <br>
+                    A senha deve ter pelo menos uma letra minúscula
+                  </div>
                 <p>Repetir-senha:</p>
-                <input type="password" placeholder="repita sua senha">
+                <input type="password" id="iptRepetirSenha" placeholder="repita sua senha">
+                <div class="mensagemErro" id="erroRepetirSenha" style="display: none;">
+                    Senha não são iguais <br>
+                  </div>
                 <p>Telefone:</p>
-                <input type="text" placeholder="(dd)xxxxx-xxxx">
+                <input type="text" id="iptTelefone" placeholder="(dd)xxxxx-xxxx">
             </div>
-            <button>Cadastrar</button>
+            <button onclick="cadastrar()">Cadastrar</button>
         </div>
     </main>
+    <footer>
+        <div class="container">
+             <img src="./img/CodeCraft__2_-removebg-preview.png" alt="">
+             <div class="navegar">
+                 <p class="footerTitulo">Navegação</p>
+                 <ul>
+                     <li><a href="./index.html">HOME</a></li>
+                     <li><a href="#">PROGRAMAÇÃO</a></li>
+                     <li><a href="#">QUIZ</a></li>
+                     <li><a href="#">SOBRE NÓS</a></li>
+                 </ul>
+             </div>
+             <div class="contato">
+                 <p class="footerTitulo">Contato</p>
+                 <i class='bx bxl-instagram'></i>
+                 <p class="footerTexto">codecraft@gmail.com</p>
+             </div>
+        </div>
+     </footer>
 </body>
 </html>
+<script>
+    function cadastrar(){
+        var email = iptEmail.value
+        var senha = iptSenha.value
+        var repetirSenha = iptRepetirSenha.value
+        var telefone = iptTelefone.value
+
+        var possui_especial =
+      senha.indexOf('#') >= 0 ||
+      senha.indexOf('@') >= 0 ||
+      senha.indexOf('!') >= 0 ||
+      senha.indexOf('%') >= 0 ||
+      senha.indexOf('?') >= 0 ||
+      senha.indexOf('-') >= 0 ||
+      senha.indexOf('+') >= 0 ||
+      senha.indexOf('_') >= 0;
+
+      if (email.indexOf('@') >= 0 && (email.endsWith('.com') || email.endsWith('.br') || email.endsWith('.school'))) {
+      erroEmail.style.display = 'none'
+      iptEmail.style.borderColor = 'transparent';
+    }
+    else {
+      erroEmail.style.display = 'block';
+      iptEmail.style.borderColor = 'red';
+    }
+    if (senha.length >= 8 && possui_especial && (senha != senha.toUpperCase() && senha != senha.toLowerCase())) {
+      erroSenha.style.display = 'none'
+      iptSenha.style.borderColor = 'transparent';
+    }
+    else {
+      erroSenha.style.display = 'block'
+      iptSenha.style.borderColor = 'red'
+    }
+    if(repetirSenha == senha){
+        erroRepetirSenha.style.display = 'none'
+      iptRepetirSenha.style.borderColor = 'transparent';
+    }else {
+        erroRepetirSenha.style.display = 'block'
+      iptRepetirSenha.style.borderColor = 'red'
+    }
+    }
+</script>
