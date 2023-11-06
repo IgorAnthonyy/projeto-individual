@@ -1,0 +1,21 @@
+.menu-lateral {
+    width: 180px;
+    height: 500px;
+    padding: 10px;
+    background-color: #00414d;
+    overflow-y: scroll;
+    overflow-x: hidden;
+}
+.menu-lateral h2 {
+    text-align: center;
+    color: #fff;
+}
+.menu-lateral button {
+    background-color: transparent;
+    border: none;
+    display: block;
+    color: #fff;
+    padding-top: 20px;
+    letter-spacing: 5px;
+    cursor: pointer;
+}
