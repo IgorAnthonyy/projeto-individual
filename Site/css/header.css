@@ -20,7 +20,7 @@
 .cabecalho-navbar ul  {
     display: flex;
     align-items: center;
-    gap: 50px;
+    gap: 10px;
     list-style: none;
 }
 .cabecalho-navbar ul li a, button {
