@@ -46,7 +46,7 @@
         <button class="btnPrincipal"><h3 class="titulo-menuLateral">Historia</h3></button>
         <div id="sumirHistoria" class="historia">
         </div>
-        <button onclick="sumir1()" class="btnPrincipal"><h3 class="titulo-menuLateral">Atributos<i class='bx bxs-down-arrow'></i></h3></button>
+        <button onclick="sumir1()" id="botaoPrincipal" class="btnPrincipal"><h3 class="titulo-menuLateral">Atributos<i class='bx bxs-down-arrow'></i></h3></button>
         <div id="sumirElemento" class="elementos">
             <button class="subTitulo">IMAGENS</button>
             <button class="subTitulo">INPUTS</button>
@@ -66,14 +66,14 @@
                         <h3>CRIADOR</h3>
                     <p class="pCol-1">Sir Tim Berners-Lee é um cientista da computação britânico amplamente reconhecido como o inventor da World Wide Web (WWW) e o desenvolvedor do primeiro navegador web e servidor web. Ele nasceu em 8 de junho de 1955 em Londres, Reino Unido.</p>
                     </div>
-                    <img class="imgCriador" width="150px" src="https://upload.wikimedia.org/wikipedia/commons/4/4e/Sir_Tim_Berners-Lee_%28cropped%29.jpg" alt="">
+                    <img class="imgCriador" width="100px" src="https://upload.wikimedia.org/wikipedia/commons/4/4e/Sir_Tim_Berners-Lee_%28cropped%29.jpg" alt="">
                 </div>
                 <div class="col-1">
                     <div class="col-1Textos">
                         <h3>ATUALMENTE</h3>
                     <p class="pCol-1">O HTML5, a versão mais recente e amplamente adotada do HTML, foi lançado em 2014 e trouxe uma série de recursos avançados, como suporte a áudio e vídeo, elementos de formulário aprimorados, canvas para gráficos interativos e muito mais. HTML5 desempenhou um papel fundamental na criação de aplicações web modernas e ricas em recursos.</p>
                     </div>
-                    <img width="150px" src="https://upload.wikimedia.org/wikipedia/commons/thumb/3/38/HTML5_Badge.svg/2048px-HTML5_Badge.svg.png" alt="">
+                    <img width="100px" src="https://upload.wikimedia.org/wikipedia/commons/thumb/3/38/HTML5_Badge.svg/2048px-HTML5_Badge.svg.png" alt="">
                 </div>
             </div>
             <div id="imagens">
@@ -107,7 +107,9 @@
 function sumir1() {
     if(sumirElemento.style.display == 'block'){
         sumirElemento.style.display = 'none'
+        botaoPrincipal.innerHTML = `<h3 class="titulo-menuLateral">Atributos<i class='bx bxs-down-arrow'></i></h3>`
     }else {
+        botaoPrincipal.innerHTML = `<h3 class="titulo-menuLateral">Atributos<i class='bx bxs-right-arrow'></i></h3>`
         sumirElemento.style.display = 'block'
     }
 }

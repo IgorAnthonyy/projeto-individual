@@ -6,8 +6,6 @@ main {
     height: 500px;
     padding: 10px;
     background-color: #00414d;
-    overflow-y: scroll;
-    overflow-x: hidden;
 }
 .conteudoDireita {
     width: 100%;
@@ -17,6 +15,7 @@ main {
 }
 .menu-lateral h2 {
     text-align: center;
+    margin-bottom: 20px;
     color: #fff;
 }
 .menu-lateral .btnPrincipal {
@@ -45,7 +44,7 @@ main {
 .imgCriador {
     border-radius: 100px;
     box-shadow: #0097B2 0px 2px 8px;
-    border: 10px solid #0097B2;
+    border: 5px solid #0097B2;
 }
 
 #ondeComecou h3{
@@ -56,14 +55,15 @@ main {
 .textos {
     color: #3f3f3f;
     word-spacing: 5px;
-    width: 70%;
+    width: 100%;
     font-size: 20px;
 }
 .col-1Textos {
-    width: 70%;
+    width: 90%;
 }
 .col-1 {
-    margin-bottom: 70px;
+    width: 100%;
+    margin-bottom: 20px;
     display: flex;
     align-items: center;
 }
@@ -71,4 +71,7 @@ main {
     color: #3f3f3f;
     word-spacing: 5px;
     font-size: 20px;
+}
+.btnPrincipal .bx {
+    font-size: 10px;
 }
