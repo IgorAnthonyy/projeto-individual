@@ -13,25 +13,32 @@
     <title>CodeCraft - Cadastro</title>
 </head>
 <body>
-    <header class="cabecalho">
-        <div class="container">
-            <div class="logo">
-                <img src="./img/CodeCraft-removebg-preview.png" alt="">
-            </div>
-            <nav class="cabecalho-navbar">
-                <ul>
-                    <li><a href="./index.html">HOME</a></li>
-                    <li><a href="#">PROGRAMAÇÃO</a></li>
-                    <li><a href="./quiz.html">QUIZ</a></li>
-                    <li><a href="#">SOBRE NÓS</a></li>
-                </ul>
-            </nav>
-            <div class="cadastroElogin">
-                <a class="cl cadastro" href="./cadastro.html">Cadastro</a>
-                <a class="cl login" href="./login.html">Login</a>
-            </div>
+  <header class="cabecalho">
+    <div class="container">
+        <div class="logo">
+            <img src="./img/CodeCraft-removebg-preview.png" alt="">
         </div>
-    </header>
+        <nav class="cabecalho-navbar">
+            <ul>
+                <li><a href="./index.html">HOME</a></li>
+                <div class="headerClick">
+                    <li><button onclick="executar()">PROGRAMAÇÃO</button></li>
+                    <div id="sumir" class="sumirAparecer">
+                        <a href="./programacaoHTML.html">HTML</a>
+                        <a href="">CSS</a>
+                        <a href="">JAVASCRIPT</a>
+                    </div>
+                </div>
+                <li><a href="./quiz.html">QUIZ</a></li>
+                <li><a href="./sobre.html">SOBRE NÓS</a></li>
+            </ul>
+        </nav>
+        <div class="cadastroElogin">
+            <a class="cl cadastro" href="./cadastro.html">Cadastro</a>
+            <a class="cl login" href="./login.html">Login</a>
+        </div>
+    </div>
+</header>
     <main>
         <div class="cadastroBox">
             <img width="150px" src="./img/Source code.gif" alt="">
@@ -80,6 +87,7 @@
              </div>
         </div>
      </footer>
+     <script src="./js/header.js"></script>
 </body>
 </html>
 <script>

@@ -21,7 +21,14 @@
             <nav class="cabecalho-navbar">
                 <ul>
                     <li><a href="./index.html">HOME</a></li>
-                    <li><a href="./programacao.html">PROGRAMAÇÃO</a></li>
+                    <div class="headerClick">
+                        <li><button onclick="executar()">PROGRAMAÇÃO</button></li>
+                        <div id="sumir" class="sumirAparecer">
+                            <a href="./programacaoHTML.html">HTML</a>
+                            <a href="">CSS</a>
+                            <a href="">JAVASCRIPT</a>
+                        </div>
+                    </div>
                     <li><a href="./quiz.html">QUIZ</a></li>
                     <li><a href="./sobre.html">SOBRE NÓS</a></li>
                 </ul>
@@ -67,6 +74,7 @@
              </div>
         </div>
      </footer>
+     <script src="./js/header.js"></script>
 </body>
 </html>
 <script>

@@ -17,17 +17,34 @@
     align-items: center;
     justify-content: space-between;
 }
-.cabecalho-navbar ul li {
-    display: inline-block;
+.cabecalho-navbar ul  {
+    display: flex;
+    align-items: center;
+    gap: 50px;
+    list-style: none;
 }
-.cabecalho-navbar ul li a {
+.cabecalho-navbar ul li a, button {
     text-decoration: none;
+    padding: 10px;
     color: #333333;
     font-size: 18px;
-    margin-left: 20px;
+    border: none;
+    background-color: transparent;
+    transition: 0.2s;
+}
+.cabecalho-navbar ul li button {
+    cursor: pointer;
 }
 .cl {
     text-decoration: none;
+}
+.cabecalho-navbar ul li a:hover {
+    background-color: #0097B2;
+    color: #fff;
+}
+.cabecalho-navbar ul li button:hover {
+    background-color: #0097B2;
+    color: #fff;
 }
 .cadastroElogin .cadastro {
     color: #333333;
@@ -47,6 +64,21 @@
     width: 150px;
     padding: 5px;
 }
-.cabecalho-navbar ul li a:hover {
-    border-bottom: 4px solid rgb(0, 140, 255);
+.sumirAparecer a {
+    display: block;
+    text-decoration: none;
+    color: #333333;
+    font-size: 18px;
+    margin-top: 20px;
+    padding: 10px;
+}
+.sumirAparecer a:hover {
+    background-color: #0097B2;
+    color: #fff;
+}
+.sumirAparecer{
+    display: none;
+    background-color: #fff;
+    padding: 10px;
+    position: absolute;
 }
