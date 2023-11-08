@@ -10,6 +10,7 @@ main {
 .conteudoDireita {
     width: 100%;
     height: 500px;
+    background-color: #3f3f3f;
     overflow-y: scroll;
     overflow-x: hidden;
 }
@@ -41,19 +42,23 @@ main {
 .conteudoDireita {
     padding: 30px
 }
+/* CSS DA PAGINA DA HISTORIA */
+#ondeComecou {
+    display: none;
+}
 .imgCriador {
     width: 160px;
     border-radius: 10px;
     padding-right: 15px;
 }
 
-#ondeComecou h3{
-    color: #0097B2;
+#ondeComecou, #imagens, #inputs, #tabela, #texto, #ancora h3{
+    color: #00d9ff;
     font-size: 30px;
     margin-bottom: 20px;
 }
 .textos {
-    color: #3f3f3f;
+    color: #ffffff;
     word-spacing: 5px;
     width: 100%;
     font-size: 20px;
@@ -68,13 +73,155 @@ main {
     align-items: center;
 }
 .pCol-1 {
-    color: #3f3f3f;
+    color: #ffffff;
     word-spacing: 5px;
     font-size: 20px;
 }
 .btnPrincipal .bx {
     font-size: 10px;
 }
-/* #ondeComecou .textos {
-    margin-bottom: 30px;
-} */
+.marginB {
+    margin-bottom: 20px
+}
+/* CSS DA PAGINA DE IMAGENS */
+
+#imagens {
+    display: none;
+}
+.sintaxe {
+    background-color: #464646;
+    padding: 15px;
+    border-radius: 10px;
+    margin-bottom: 20px;
+    width: 35%;
+}
+.tituloSintaxe {
+    text-align: center;
+    font-size: 30px;
+    color: #e0e0e0;
+    padding: 20px 20px 20px 0 ;
+}
+#imagens pre {
+    background-color: #535353;
+    border-radius: 10px;
+    padding: 5px;
+    font-size: 20px;
+    text-align: center;
+}
+
+.chave {
+    color: #e4e4e4;
+}
+.tag {
+    color: #00d9ff;
+}
+.atributo {
+    color: orange;
+}
+.string {
+    color: rgb(255, 81, 81);
+}
+.sintaxe .descSintaxe {
+    color: #fff;
+    font-size: 18px;
+    letter-spacing: 1px;
+    word-spacing: 2px;
+}
+.flex {
+    justify-content: center;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 50px;
+}
+.left {
+    text-align: left;
+}
+.formato {
+    font-size: 24px;
+    color: rgb(180, 200, 255);
+}
+.descFormato {
+    width: 70%;
+    font-size: 19px;
+    color: #ffffff;
+}
+/* CSS DA PAGINA DE INPUTS */
+#inputs pre {
+    background-color: #535353;
+    border-radius: 10px;
+    padding: 5px;
+    font-size: 25px;
+    text-align: center;
+}
+#inputs {
+    display: none;
+}
+.tipo {
+    font-size: 20px;
+    color: #fff;
+    background-color: #535353;
+    padding: 10px;
+    border-radius: 10px;
+}
+.sintaxe input {
+    width: 50%;
+    padding-left: 20px;
+    height: 30px;
+}
+.divInput {
+    text-align: center;
+}
+/* css da pagina de tabela */
+#tabela {
+    display: none;
+}
+#tabela pre {
+    background-color: #535353;
+    border-radius: 10px;
+    padding: 5px;
+    font-size: 20px;
+}
+table {
+    color: #fff;
+    font-size: 20px;
+}
+.divTabela {
+    display: flex;
+    justify-content: center;
+}
+.divTabela table,
+td {
+    padding: 10px;
+  border: 1px solid #ffffff;
+}
+
+
+.divTabela thead,
+tfoot {
+  color: #fff;
+}
+/* css da tela de textos */
+#texto {
+    display: none;
+}
+#texto pre {
+    background-color: #535353;
+    border-radius: 10px;
+    padding: 5px;
+    font-size: 20px;
+    text-align: center;
+}
+/* css da tela de ancora */
+#ancora pre {
+    background-color: #535353;
+    border-radius: 10px;
+    padding: 5px;
+    font-size: 20px;
+    text-align: center;
+}
+#ancora {
+    display: none;
+}
+.textoSpan {
+    color: rgb(255, 255, 158)
+}

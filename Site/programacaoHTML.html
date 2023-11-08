@@ -43,42 +43,271 @@
     <main>
        <div class="menu-lateral">
         <h2>HTML</h2>
-        <button class="btnPrincipal"><h3 class="titulo-menuLateral">Historia</h3></button>
-        <div id="sumirHistoria" class="historia">
-        </div>
         <button onclick="sumir1()" id="botaoPrincipal" class="btnPrincipal"><h3 class="titulo-menuLateral">Atributos<i class='bx bxs-down-arrow'></i></h3></button>
         <div id="sumirElemento" class="elementos">
-            <button class="subTitulo">IMAGENS</button>
-            <button class="subTitulo">INPUTS</button>
-            <button class="subTitulo">TABELAS</button>
-            <button class="subTitulo">TEXTOS</button>
-            <button class="subTitulo">ÂNCORA</button>
-            <button class="subTitulo">TAGS SEMÂNTICAS</button>
+            <button onclick="" class="subTitulo">ESTRUTURA</button>
+            <button onclick="imagem()" class="subTitulo">IMAGENS</button>
+            <button onclick="input()" class="subTitulo">INPUTS</button>
+            <button onclick="tabelas()" class="subTitulo">TABELAS</button>
+            <button onclick="textos()" class="subTitulo">TEXTOS</button>
+            <button onclick="ancoras()" class="subTitulo">ÂNCORA</button>
+            <button onclick="" class="subTitulo">LISTA</button>
         </div>
        </div>
        <div class="conteudoDireita">
-            <div id="ondeComecou">
-                <h3>ONDE INICIOU O HTML</h3>
-                <p class="textos">O HTML (Hypertext Markup Language) foi desenvolvido por Tim Berners-Lee no CERN (Organização Europeia para a Pesquisa Nuclear) na Suíça. O motivo principal para o desenvolvimento do HTML e da World Wide Web (WWW) foi melhorar a comunicação e o compartilhamento de informações entre os cientistas e pesquisadores do CERN.</p>
-                <p class="textos">Tim Berners-Lee começou a trabalhar no CERN em 1980 e estava frustrado com a falta de eficiência na comunicação de documentos e informações entre as equipes de pesquisa que estavam fisicamente distantes. Ele percebeu que um sistema de hipertexto interligado poderia resolver esse problema. Hipertexto é um sistema que permite vincular documentos de maneira não linear, onde você pode saltar de um documento para outro por meio de links.</p>
-                <div class="col-1">
-                    <img class="imgCriador" width="100px" src="https://upload.wikimedia.org/wikipedia/commons/4/4e/Sir_Tim_Berners-Lee_%28cropped%29.jpg" alt="">
-                    <div class="col-1Textos">
-                        <h3>CRIADOR</h3>
-                    <p class="pCol-1">Sir Tim Berners-Lee é um cientista da computação britânico amplamente reconhecido como o inventor da World Wide Web (WWW) e o desenvolvedor do primeiro navegador web e servidor web. Ele nasceu em 8 de junho de 1955 em Londres, Reino Unido.</p>
+            
+            <div id="imagens">
+                <h3>IMAGENS</h3>
+                <p class="textos marginB">A tag HTML < img > é usada para incorporar imagens em uma página da web. Aqui está um resumo das principais características e atributos dessa tag:</p>
+                <h4 class="tituloSintaxe">Sintaxe</h4>
+                <div class="flex">
+                        <div class="sintaxe">
+                            <pre class="marginB"><span class="chave"><</span><span class="tag">img</span> <span class="atributo">src</span><span class="chave">=</span><span class="string">" "</span><span class="chave">></span></pre>
+                            <p class="descSintaxe marginB">O atributo "src" é obrigatório e especifica o caminho para o arquivo de imagem que você deseja exibir. Você pode fornecer um URL absoluto ou um caminho relativo para a imagem.</p>
                     </div>
-                    
+                    <div class="sintaxe">
+                        <pre class="marginB"><span class="chave"><</span><span class="tag">img</span> <span class="atributo">src</span><span class="chave">=</span><span class="string">" "</span> <span class="atributo">alt</span><span class="chave">=</span><span class="string">" "</span><span class="chave">></span></pre>
+                            <p class="descSintaxe marginB">O atributo "alt" é opcional e fornece um texto alternativo para a imagem. Ele é usado para descrever a imagem, caso ela não possa ser exibida ou para fins de acessibilidade, ajudando pessoas com deficiência visual a entender o conteúdo da imagem.</p>
+                    </div>
+                    <div class="sintaxe">
+                        <pre class="marginB"><span class="chave"><</span><span class="tag">img</span> <span class="atributo">src</span><span class="chave">=</span><span class="string">" "</span> <span class="atributo">width</span><span class="chave">=</span><span class="string">" "</span> <span class="atributo">right</span><span class="chave">=</span><span class="string">" "</span><span class="chave">></span></pre>
+                        <p class="descSintaxe">Esses atributos são opcionais e permitem definir a largura e a altura da imagem em pixels. Eles são usados para controlar o tamanho da imagem na página.</p>
+        
+                    </div>
                 </div>
-                <div class="col-1">
-                    <div class="col-1Textos">
-                        <h3>ATUALMENTE</h3>
-                    <p class="pCol-1">O HTML5, a versão mais recente e amplamente adotada do HTML, foi lançado em 2014 e trouxe uma série de recursos avançados, como suporte a áudio e vídeo, elementos de formulário aprimorados, canvas para gráficos interativos e muito mais. HTML5 desempenhou um papel fundamental na criação de aplicações web modernas e ricas em recursos.</p>
-                    </div>
-                    <img width="100px" src="https://upload.wikimedia.org/wikipedia/commons/thumb/3/38/HTML5_Badge.svg/2048px-HTML5_Badge.svg.png" alt="">
+                <h4 class="tituloSintaxe left">Formatos de imagens suportadas</h4>
+                <p class="descFormato marginB">A tag <img> em HTML pode exibir imagens em vários formatos, desde que o navegador seja capaz de renderizar o formato específico. Alguns dos formatos de imagem mais comuns que podem ser usados com a tag <img> incluem:</p>
+                <div class="flex">
+                    <p class="formato marginB">JPEG<i class='bx bxs-file-jpg'></i></p>
+                    <p class="formato marginB">PNG<i class='bx bxs-file-png'></i></p>
+                    <p class="formato marginB">PNG ICO<i class='bx bxs-file-png'></i></p>
+                    <p class="formato marginB">GIF<i class='bx bxs-file-gif' ></i></p>
+                    <p class="formato marginB">SVG<i class='bx bx-radio-circle'></i></p>
+                    <p class="formato marginB">BMP<i class='bx bx-credit-card-alt'></i></p>
+                    <p class="formato marginB">BMP ICO<i class='bx bx-credit-card-alt'></i></p>
+                
                 </div>
             </div>
-            <div id="imagens">
+            <div id="inputs">
+                <h3>INPUTS</h3>
+                <p class="textos marginB">Os elementos <span class="chave"><</span><span class="tag">input</span><span class="chave">></span> em HTML são utilizados para criar campos de entrada em formulários da web, permitindo que os usuários insiram dados, como texto, números, opções ou arquivos.</p>
+                <h4 class="tituloSintaxe">Tipos de inputs</h4>
+                <div class="flex">
+                    <p class="tipo marginB">Text</p>
+                    <p class="tipo marginB">Number</p>
+                    <p class="tipo marginB">Password</p>
+                    <p class="tipo marginB">Number</p>
+                    <p class="tipo marginB">Checkbox e radio</p>
+                    <p class="tipo marginB">File</p>
+                    <p class="tipo marginB">Submit e button</p>
+                    <p class="tipo marginB">Date, time e datetime-local</p>
+                    <p class="tipo marginB">Submit e button</p>
+                    <p class="tipo marginB">Color</p>
+                    <p class="tipo marginB">Range</p>
+                    <p class="tipo marginB">Hidden</p>
+                </div>
+                <h4 class="tituloSintaxe">Sintaxe</h4>
+                <div class="flex">
+                        <div class="sintaxe">
+                            <pre class="marginB"><span class="chave"><</span><span class="tag">input</span> <span class="atributo">type</span><span class="chave">=</span><span class="string">"text"</span><span class="chave">></span></pre>
+                            <div class="divInput">
+                                <input class="marginB" type="text" placeholder="tipo texto">
+                            </div>
+                            <p class="descSintaxe marginB">Este tipo de campo de entrada permite que os usuários insiram texto simples, como nomes, endereços de e-mail ou mensagens.</p>
+                    </div>
+                    <div class="sintaxe">
+                        <pre class="marginB"><span class="chave"><</span><span class="tag">input</span> <span class="atributo">type</span><span class="chave">=</span><span class="string">"password"</span><span class="chave">></span></pre>
+                        <div class="divInput">
+                            <input class="marginB" type="password" placeholder="tipo password">
+                        </div>
+                        <p class="descSintaxe marginB">Semelhante ao tipo "text", mas oculta o texto inserido, normalmente exibindo asteriscos ou pontos. É usado para senhas e outros dados confidenciais.</p>
+                    </div>
+                <div class="sintaxe">
+                    <pre class="marginB"><span class="chave"><</span><span class="tag">input</span> <span class="atributo">type</span><span class="chave">=</span><span class="string">"number"</span><span class="chave">></span></pre>
+                    <div class="divInput">
+                        <input class="marginB" type="number" placeholder="tipo number">
+                    </div>
+                    <p class="descSintaxe marginB">Este tipo é usado para entrada numérica, permitindo que os usuários insiram números. Pode incluir controles para aumentar ou diminuir o valor.</p>
+                </div>
+                <div class="sintaxe">
+                    <pre class="marginB"><span class="chave"><</span><span class="tag">input</span> <span class="atributo">type</span><span class="chave">=</span><span class="string">"checkbox"</span><span class="chave">></span></pre>
+                    <div class="divInput">
+                        <input class="marginB" type="checkbox">
+                    </div>
+                    <p class="descSintaxe marginB">É usado para criar caixas de seleção em formulários HTML. As caixas de seleção permitem que os usuários escolham entre opções múltiplas, marcando ou desmarcando uma ou várias caixas de seleção.</p>
+                </div>
+                <div class="sintaxe">
+                    <pre class="marginB"><span class="chave"><</span><span class="tag">input</span> <span class="atributo">type</span><span class="chave">=</span><span class="string">"radio"</span><span class="chave">></span></pre>
+                    <div class="divInput">
+                        <input class="marginB" type="radio">
+                    </div>
+                    <p class="descSintaxe marginB">É usado para criar caixas de seleção em formulários HTML. As caixas de seleção permitem que os usuários escolham entre opções múltiplas, marcando ou desmarcando uma ou várias caixas de seleção</p>
+                </div>
+                <div class="sintaxe">
+                    <pre class="marginB"><span class="chave"><</span><span class="tag">input</span> <span class="atributo">type</span><span class="chave">=</span><span class="string">"file"</span><span class="chave">></span></pre>
+                    <div class="divInput">
+                        <input class="marginB" type="file">
+                    </div>
+                    <p class="descSintaxe marginB">Permite que os usuários escolham e enviem arquivos para o servidor, como imagens, documentos ou outros tipos de arquivos.</p>
+                </div>
+                <div class="sintaxe">
+                    <pre class="marginB"><span class="chave"><</span><span class="tag">input</span> <span class="atributo">type</span><span class="chave">=</span><span class="string">"date"</span><span class="chave">></span></pre>
+                    <div class="divInput">
+                        <input class="marginB" type="date">
+                    </div>
+                    <p class="descSintaxe marginB">Esse tipo de input é utilizado para coletar data.</p>
+                </div>
+                <div class="sintaxe">
+                    <pre class="marginB"><span class="chave"><</span><span class="tag">input</span> <span class="atributo">type</span><span class="chave">=</span><span class="string">"time"</span><span class="chave">></span></pre>
+                    <div class="divInput">
+                        <input class="marginB" type="time">
+                    </div>
+                    <p class="descSintaxe marginB">Esse tipo de input é utilizado para coletar hora.</p>
+                </div>
+                <div class="sintaxe">
+                    <pre class="marginB"><span class="chave"><</span><span class="tag">input</span> <span class="atributo">type</span><span class="chave">=</span><span class="string">"datetime-local"</span><span class="chave">></span></pre>
+                    <div class="divInput">
+                        <input class="marginB" type="datetime-local">
+                    </div>
+                    <p class="descSintaxe marginB">Esse tipo de input é utilizado para coletar data e hora.</p>
+                </div>
+                <div class="sintaxe">
+                    <pre class="marginB"><span class="chave"><</span><span class="tag">input</span> <span class="atributo">type</span><span class="chave">=</span><span class="string">"color"</span><span class="chave">></span></pre>
+                    <div class="divInput">
+                        <input class="marginB" type="color">
+                    </div>
+                    <p class="descSintaxe marginB">Permite que os usuários escolham uma cor por meio de uma paleta de cores.</p>
+                </div>
+                <div class="sintaxe">
+                    <pre class="marginB"><span class="chave"><</span><span class="tag">input</span> <span class="atributo">type</span><span class="chave">=</span><span class="string">"range"</span><span class="chave">></span></pre>
+                    <div class="divInput">
+                        <input class="marginB" type="range">
+                    </div>
+                    <p class="descSintaxe marginB">Cria um controle deslizante que permite aos usuários selecionar um valor em um intervalo predefinido.</p>
+                </div>
+                <div class="sintaxe">
+                    <pre class="marginB"><span class="chave"><</span><span class="tag">input</span> <span class="atributo">type</span><span class="chave">=</span><span class="string">"hidden"</span><span class="chave">></span></pre>
+                    <div class="divInput">
+                        <input class="marginB" type="hidden">
+                    </div>
+                    <p class="descSintaxe marginB">Esse tipo cria um campo oculto no formulário, que pode ser usado para armazenar dados que não devem ser visíveis para o usuário, mas são enviados para o servidor junto com o formulário.</p>
+                </div>
+                </div>
+            </div>
+            <div id="tabela">
+                <h3>TABELA</h3>
+                <p class="textos marginB">A tag HTML <span class="chave"><</span><span class="tag">table</span><span class="chave">></span> é usada para criar tabelas em uma página da web. Tabelas são usadas para organizar dados em linhas e colunas, o que facilita a exibição e compreensão de informações tabulares.</p>
+                <h4 class="tituloSintaxe">Sintaxe</h4>
+                <div class="flex">
+                        <div class="sintaxe">
+<pre class="marginB">
+<span class="chave"><</span><span class="tag">table</span><span class="chave">></span>
+    <span class="chave"><</span><span class="tag">thead</span><span class="chave">></span>
+        <span class="chave"><</span><span class="tag">tr</span><span class="chave">></span>
+            <span class="chave"><</span><span class="tag">th</span><span class="chave">></span><span class="textoSpan">Nome</span><span class="chave"><</span><span class="chave">/</span><span class="tag">th</span><span class="chave">></span>
+            <span class="chave"><</span><span class="tag">th</span><span class="chave">></span><span class="textoSpan">Idade</span><span class="chave"><</span><span class="chave">/</span><span class="tag">th</span><span class="chave">></span>
+        <span class="chave"><</span><span class="chave">/</span><span class="tag">tr</span><span class="chave">></span>
+    <span class="chave"><</span><span class="chave">/</span><span class="tag">thead</span><span class="chave">></span>
+    <span class="chave"><</span><span class="tag">tbody</span><span class="chave">></span>
+        <span class="chave"><</span><span class="tag">tr</span><span class="chave">></span>
+            <span class="chave"><</span><span class="tag">td</span><span class="chave">></span><span class="textoSpan">João</span><span class="chave"><</span><span class="chave">/</span><span class="tag">td</span><span class="chave">></span>
+            <span class="chave"><</span><span class="tag">td</span><span class="chave">></span><span class="textoSpan">25</span><span class="chave"><</span><span class="chave">/</span><span class="tag">td</span><span class="chave">></span>
+    <span class="chave"><</span><span class="chave">/</span><span class="tag">tr</span><span class="chave">></span>
+    <span class="chave"><</span><span class="tag">tr</span><span class="chave">></span>
+        <span class="chave"><</span><span class="tag">td</span><span class="chave">></span><span class="textoSpan">Maria</span><span class="chave"><</span><span class="chave">/</span><span class="tag">td</span><span class="chave">></span>
+        <span class="chave"><</span><span class="tag">td</span><span class="chave">></span><span class="textoSpan">20</span><span class="chave"><</span><span class="chave">/</span><span class="tag">td</span><span class="chave">></span>
+    <span class="chave"><</span><span class="chave">/</span><span class="tag">tr</span><span class="chave">></span>
+    <span class="chave"><</span><span class="chave">/</span><span class="tag">tbody</span><span class="chave">></span>
+<span class="chave"><</span><span class="chave">/</span><span class="tag">table</span><span class="chave">></span></pre>
+                            <div class="divTabela marginB">
+                                <table>
+                                    <thead>
+                                      <tr>
+                                        <th>Nome</th>
+                                        <th>Idade</th>
+                                      </tr>
+                                    </thead>
+                                    <tbody>
+                                      <tr>
+                                        <td>João</td>
+                                        <td>25</td>
+                                      </tr>
+                                      <tr>
+                                        <td>Maria</td>
+                                        <td>30</td>
+                                      </tr>
+                                    </tbody>
+                                  </table>
+                            </div>    
+                            <p class="descSintaxe marginB"><span class="chave"><</span><span class="tag">table</span><span class="chave">></span>: Esta é a tag de abertura que inicia uma tabela.</p>
+                            <p class="descSintaxe marginB"><span class="chave"><</span><span class="tag">tr</span><span class="chave">></span>: Dentro da tabela, você utiliza a tag <span class="chave"><</span><span class="tag">tr</span><span class="chave">></span> (table row) para criar linhas. Cada linha da tabela deve ser definida dentro de um par de tags.</p>
+                            <p class="descSintaxe marginB"><span class="chave"><</span><span class="tag">th</span><span class="chave">></span> e <span class="chave"><</span><span class="tag">td</span><span class="chave">></span>: Dentro das linhas, você utiliza as tags <span class="chave"><</span><span class="tag">th</span><span class="chave">></span> (table header) para criar células de cabeçalho e <span class="chave"><</span><span class="tag">td</span><span class="chave">></span> (table conteudo) para criar células de conteúdo.</p>
+                            <p class="descSintaxe marginB"><span class="chave"><</span><span class="tag">thead</span><span class="chave">></span>: É usada para agrupar as células de cabeçalho.</p>
+                            <p class="descSintaxe marginB"><span class="chave"><</span><span class="tag">tbody</span><span class="chave">></span>: É usada para agrupar as células do corpo da tabela.</p>
 
+                        </div>
+                </div>
+            </div>
+            <div id="texto">
+                <h3>TEXTOS</h3>
+                <p class="textos marginB">Em HTML, os elementos de texto são usados para exibir conteúdo textual em uma página da web.</p>
+                <h4 class="tituloSintaxe">Tipos de tags de textos</h4>
+                <div class="flex">
+                    <p class="tipo marginB">h1</p>
+                    <p class="tipo marginB">h2</p>
+                    <p class="tipo marginB">h3</p>
+                    <p class="tipo marginB">h4</p>
+                    <p class="tipo marginB">h5</p>
+                    <p class="tipo marginB">h6</p>
+                    <p class="tipo marginB">p</p>
+                    <p class="tipo marginB">strong</p>
+                    <p class="tipo marginB">span</p>
+                    <p class="tipo marginB">br</p>
+                </div>
+                <h4 class="tituloSintaxe">Sintaxe</h4>
+                <div class="flex">
+                        <div class="sintaxe">
+                            <pre class="marginB"><span class="chave"><</span><span class="tag">h1</span><span class="chave">></span><span class="textoSpan">Texto</span><span class="chave"><</span><span class="tag"><span class="chave">/</span>h1</span><span class="chave">></span>
+<span class="chave"><</span><span class="tag">h2</span><span class="chave">></span><span class="textoSpan">Texto</span><span class="chave"><</span><span class="tag"><span class="chave">/</span>h2</span><span class="chave">></span>
+<span class="chave"><</span><span class="tag">h3</span><span class="chave">></span><span class="textoSpan">Texto</span><span class="chave"><</span><span class="tag"><span class="chave">/</span>h3</span><span class="chave">></span>
+<span class="chave"><</span><span class="tag">h4</span><span class="chave">></span><span class="textoSpan">Texto</span><span class="chave"><</span><span class="tag"><span class="chave">/</span>h4</span><span class="chave">></span>
+<span class="chave"><</span><span class="tag">h5</span><span class="chave">></span><span class="textoSpan">Texto</span><span class="chave"><</span><span class="tag"><span class="chave">/</span>h5</span><span class="chave">></span>
+<span class="chave"><</span><span class="tag">h6</span><span class="chave">></span><span class="textoSpan">Texto</span><span class="chave"><</span><span class="tag"><span class="chave">/</span>h6</span><span class="chave">></span></pre>
+                            <p class="descSintaxe marginB">É usada para criar um texto de nível 1 ao nível 6 sendo o mais importante o número 1 e assim por diante.</p>
+                    </div>
+                    <div class="sintaxe">
+                        <pre class="marginB"><span class="chave"><</span><span class="tag">p</span><span class="chave">></span><span class="textoSpan">Texto</span><span class="chave"><</span><span class="tag"><span class="chave">/</span>p</span><span class="chave">></span></pre>
+                        <p class="descSintaxe marginB">É usada para separar e formatar blocos de texto em parágrafos distintos. Cada vez que você utiliza essa tag, cria um novo parágrafo, o que ajuda a melhorar a legibilidade e organização do conteúdo da página.</p>
+                    </div>
+                    <div class="sintaxe">
+                        <pre class="marginB"><span class="chave"><</span><span class="tag">strong</span><span class="chave">></span><span class="textoSpan">Texto</span><span class="chave"><</span><span class="tag"><span class="chave">/</span>strong</span><span class="chave">></span></pre>
+                        <p class="descSintaxe marginB">É usada para indicar que o texto dentro dela deve ser exibido com ênfase, geralmente na forma de negrito. Essa ênfase forte é usada para destacar a importância ou o peso do texto, não apenas para fins de formatação visual, mas também para fins semânticos.</p>
+                    </div>
+                    <div class="sintaxe">
+                        <pre class="marginB"><span class="chave"><</span><span class="tag">span</span><span class="chave">></span><span class="textoSpan">Texto</span><span class="chave"><</span><span class="tag"><span class="chave">/</span>span</span><span class="chave">></span></pre>
+                        <p class="descSintaxe marginB">É usada para aplicar estilos ou scripts a partes específicas de texto em uma página da web, sem afetar a estrutura geral do documento.</p>
+                    </div>
+                    <div class="sintaxe">
+                        <pre class="marginB"><span class="chave"><</span><span class="tag">br</span><span class="chave">></span></pre>
+                        <p class="descSintaxe marginB">É usada para forçar uma quebra de linha em um documento HTML, sem iniciar um novo parágrafo. Ela é útil quando você deseja quebrar o texto em várias linhas dentro do mesmo contexto, como endereços, poesia, ou sempre que a quebra de linha for necessária.</p>
+                    </div>
+                </div>
+            </div>
+            <div id="ancora">
+                <h3>ÂNCORA</h3>
+                <p class="textos marginB">A âncora é criada com a tag <span class="chave"><</span><span class="tag">a</span><span class="chave">></span> , que é usada para criar links hiperativos em páginas da web.</p>
+                <p class="textos">Links hiperativos, comumente referidos como "hiperlinks" ou simplesmente "links", são elementos em páginas da web que permitem que os usuários cliquem em um texto ou elemento para serem redirecionados para outra página da web, recurso ou localização. Eles são elementos interativos que conectam diferentes partes da web, permitindo a navegação de um local para outro.</p>
+                <h4 class="tituloSintaxe">Sintaxe</h4>
+                <div class="flex">
+                        <div class="sintaxe">
+                            <pre class="marginB"><span class="chave"><</span><span class="tag">a</span> <span class="atributo">href</span><span class="chave">=</span><span class="chave">"www.meusite.com"</span> <span class="atributo">target</span><span class="chave">=</span><span class="chave">"_blank"</span><span class="chave">></span><span class="textoSpan">Visitar</span><span class="chave"><</span><span class="chave">/</span><span class="tag">a</span><span class="chave">></span></pre>
+                            <p class="descSintaxe marginB"><span class="chave"><</span><span class="tag">a</span><span class="chave">></span>Essa é a tag de abertura para criar um link hiperativo.</p>
+                            <p class="descSintaxe marginB"><span class="tag">href</span> O atributo "href" é obrigatório e define o URL da página ou recurso para o qual o link deve apontar. Pode ser um URL absoluto (começando com "http://" ou "https://") ou um URL relativo (referindo-se a um recurso dentro do mesmo site).</p>
+                            <p class="descSintaxe marginB"><span class="tag">target</span> O atributo "target" é opcional e define como o link deve ser aberto. Alguns valores comuns incluem "_blank" para abrir o link em uma nova janela ou guia, ou "_self" para abrir no mesmo quadro ou janela.</p>
+                            
+                        </div>
+                </div>
+            </div>
             </div>
        </div>
     </main>
@@ -113,5 +342,44 @@ function sumir1() {
         botaoPrincipal.innerHTML = `<h3 class="titulo-menuLateral">Atributos<i class='bx bxs-right-arrow'></i></h3>`
         sumirElemento.style.display = 'block'
     }
+}
+
+function imagem(){
+    imagens.style.display = 'block'
+    inputs.style.display = 'none'
+    tabela.style.display = 'none'
+    texto.style.display = 'none'
+    ancora.style.display = 'none'
+}
+function input(){
+    inputs.style.display = 'block'
+    imagens.style.display = 'none'
+    tabela.style.display = 'none'
+    texto.style.display = 'none'
+    ancora.style.display = 'none'
+
+
+}
+function tabelas(){
+    tabela.style.display = 'block'
+    inputs.style.display = 'none'
+    imagens.style.display = 'none'
+    texto.style.display = 'none'
+    ancora.style.display = 'none'
+
+}
+function textos(){
+    texto.style.display = 'block'
+    tabela.style.display = 'none'
+    inputs.style.display = 'none'
+    imagens.style.display = 'none'
+    ancora.style.display = 'none'
+}
+function ancoras(){
+    ancora.style.display = 'block'
+    texto.style.display = 'none'
+    tabela.style.display = 'none'
+    inputs.style.display = 'none'
+    imagens.style.display = 'none'
 }
 </script>
