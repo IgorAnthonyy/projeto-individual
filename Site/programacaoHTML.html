@@ -23,7 +23,7 @@
                 <ul>
                     <li><a href="./index.html">HOME</a></li>
                     <div class="headerClick">
-                        <li><button onclick="executar()">PROGRAMAÇÃO</button></li>
+                        <li><button onclick="executar()">FRONT-END</button></li>
                         <div id="sumir" class="sumirAparecer">
                             <a href="./programacaoHTML.html">HTML</a>
                             <a href="./programacaoCSS.html">CSS</a>
@@ -45,13 +45,13 @@
         <h2>HTML</h2>
         <button onclick="sumir1()" id="botaoPrincipal" class="btnPrincipal"><h3 class="titulo-menuLateral">Atributos<i class='bx bxs-down-arrow'></i></h3></button>
         <div id="sumirElemento" class="elementos">
-            <button onclick="" class="subTitulo">ESTRUTURA</button>
+            <button onclick="estruturaHtml()" class="subTitulo">ESTRUTURA</button>
             <button onclick="imagem()" class="subTitulo">IMAGENS</button>
             <button onclick="input()" class="subTitulo">INPUTS</button>
             <button onclick="tabelas()" class="subTitulo">TABELAS</button>
             <button onclick="textos()" class="subTitulo">TEXTOS</button>
             <button onclick="ancoras()" class="subTitulo">ÂNCORA</button>
-            <button onclick="" class="subTitulo">LISTA</button>
+            <button onclick="listas()" class="subTitulo">LISTA</button>
         </div>
        </div>
        <div class="conteudoDireita">
@@ -300,13 +300,88 @@
                 <h4 class="tituloSintaxe">Sintaxe</h4>
                 <div class="flex">
                         <div class="sintaxe">
-                            <pre class="marginB"><span class="chave"><</span><span class="tag">a</span> <span class="atributo">href</span><span class="chave">=</span><span class="chave">" "</span> <span class="atributo">target</span><span class="chave">=</span><span class="chave">"_blank"</span><span class="chave">></span><span class="textoSpan">Visitar</span><span class="chave"><</span><span class="chave">/</span><span class="tag">a</span><span class="chave">></span></pre>
+                            <pre class="marginB"><span class="chave"><</span><span class="tag">a</span> <span class="atributo">href</span><span class="chave">=</span><span class="string">" "</span> <span class="atributo">target</span><span class="chave">=</span><span class="string">"_blank"</span><span class="chave">></span><span class="textoSpan">Visitar</span><span class="chave"><</span><span class="chave">/</span><span class="tag">a</span><span class="chave">></span></pre>
                             <p class="descSintaxe marginB"><span class="chave"><</span><span class="tag">a</span><span class="chave">></span>Essa é a tag de abertura para criar um link hiperativo.</p>
                             <p class="descSintaxe marginB"><span class="tag">href</span> O atributo "href" é obrigatório e define o URL da página ou recurso para o qual o link deve apontar. Pode ser um URL absoluto (começando com "http://" ou "https://") ou um URL relativo (referindo-se a um recurso dentro do mesmo site).</p>
                             <p class="descSintaxe marginB"><span class="tag">target</span> O atributo "target" é opcional e define como o link deve ser aberto. Alguns valores comuns incluem "_blank" para abrir o link em uma nova janela ou guia, ou "_self" para abrir no mesmo quadro ou janela.</p>
                             
                         </div>
                 </div>
+            </div>
+            <div id="estrutura">
+                <h3>ESTRUTURA</h3>
+                <p class="textos marginB">A estrutura básica de um documento HTML (Hypertext Markup Language) consiste em uma série de elementos aninhados que descrevem a estrutura e o conteúdo de uma página da web.</p>
+                <h4 class="tituloSintaxe">Sintaxe</h4>
+                <div class="flex">
+                        <div class="sintaxe">
+                            <pre class="marginB">
+<span class="chave"><</span><span class="chave">!DOCTYPE</span> <span class="tag">html</span><span class="chave">></span>
+<span class="chave"><</span><span class="tag">html</span> <span class="atributo">lang</span><span class="chave">=</span><span class="string">"pt-br"</span><span class="chave">></span>
+    <span class="chave"><</span><span class="tag">head</span><span class="chave">></span>
+            <span class="chave"><</span><span class="tag">meta</span> <span class="atributo">charset</span><span class="chave">=</span><span class="string">"UTF-8"</span><span class="chave">></span>
+            <span class="chave"><</span><span class="tag">title</span><span class="chave">></span> <span class="textoSpan">title</span> <span class="chave"><</span><span class="chave">/</span><span class="tag">title</span><span class="chave">></span>
+    <span class="chave"><</span><span class="chave">/</span><span class="tag">head</span><span class="chave">></span>
+    <span class="chave"><</span><span class="tag">body</span><span class="chave">></span>
+
+    <span class="chave"><</span><span class="chave">/</span><span class="tag">body</span><span class="chave">></span>
+<span class="chave"><</span><span class="chave">/</span><span class="tag">html</span><span class="chave">></span></pre>
+                            <p class="descSintaxe marginB"><span class="chave"><</span><span class="chave">!DOCTYPE</span> <span class="tag">html</span><span class="chave">></span>: Esta declaração define a versão do HTML que está sendo usada, no caso, o HTML5.</p>
+                            <p class="descSintaxe marginB"><span class="chave"><</span><span class="tag">html</span> <span class="atributo">lang</span><span class="chave">=</span><span class="string">"pt-br"</span><span class="chave">></span>: O elemento raiz que engloba todo o conteúdo da página.</p>
+                            <p class="descSintaxe marginB"><span class="chave"><</span><span class="tag">head</span><span class="chave">></span>: Contém informações sobre a página que não são exibidas no navegador, como metadados, links para arquivos CSS e JavaScript, e o título da página.</p>
+                            <p class="descSintaxe marginB"><span class="chave"><</span><span class="tag">meta</span> <span class="atributo">charset</span><span class="chave">=</span><span class="string">"UTF-8"</span><span class="chave">></span>: Define a codificação de caracteres para a página, geralmente definida como UTF-8 para suportar caracteres especiais e internacionais.</p>
+                            <p class="descSintaxe marginB"><span class="chave"><</span><span class="tag">title</span><span class="chave">></span>: Define o título da página, que é exibido na barra de título do navegador.</p>
+                            <p class="descSintaxe marginB"><span class="chave"><</span><span class="tag">body</span><span class="chave">></span>: Contém o conteúdo visível da página.</p>
+                            
+                        </div>
+                </div>
+            </div>
+            <div id="lista">
+                <h3>LISTAS</h3>
+                <p class="textos marginB">Listas em HTML são usadas para organizar e estruturar informações em formato de itens. Existem dois tipos principais de listas em HTML: listas não ordenadas e listas ordenadas.</p>
+                <h4 class="tituloSintaxe">Tipos de listas</h4>
+                <div class="flex">
+                    <p class="tipo marginB">Lista não ordenada <span class="chave"><</span><span class="tag">ul</span><span class="chave">></span></p>
+                    <p class="tipo marginB">Lista ordenada <span class="chave"><</span><span class="tag">ol</span><span class="chave">></span></p>
+                </div>
+                <h4 class="tituloSintaxe">Sintaxe</h4>
+            <div class="flex">
+                <div class="sintaxe">
+                    <pre class="marginB">
+<span class="chave"><</span><span class="tag">ul</span><span class="chave">></span>
+        <span class="chave"><</span><span class="tag">li</span><span class="chave">></span> <span class="textoSpan">Item 1</span> <span class="chave"><</span><span class="chave">/</span><span class="tag">li</span><span class="chave">></span>
+        <span class="chave"><</span><span class="tag">li</span><span class="chave">></span> <span class="textoSpan">Item 2</span> <span class="chave"><</span><span class="chave">/</span><span class="tag">li</span><span class="chave">></span>
+        <span class="chave"><</span><span class="tag">li</span><span class="chave">></span> <span class="textoSpan">Item 3</span> <span class="chave"><</span><span class="chave">/</span><span class="tag">li</span><span class="chave">></span>
+<span class="chave"><</span><span class="chave">/</span><span class="tag">ul</span><span class="chave">></span></pre>
+                     <div class="flex">
+                            <ul class="marginB">
+                                    <li>Item 1</li>
+                                    <li>Item 2</li>
+                                    <li>Item 3</li>
+                            </ul>  
+                     </div>                 
+                    <p class="descSintaxe marginB">O elemento <span class="chave"><</span><span class="tag">ul</span><span class="chave">></span> é usado para criar listas não ordenadas em HTML.</p>
+                    <p class="descSintaxe marginB">Uma lista não ordenada é uma lista de itens onde a ordem dos itens não é significativa. Cada item da lista é representado pelo elemento <span class="chave"><</span><span class="tag">li</span><span class="chave">></span> (item de lista)</p>
+                    <p class="descSintaxe ">Uma lista não ordenada é uma lista de itens onde a ordem dos itens não é significativa.</p>
+            </div>
+            <div class="sintaxe">
+                <pre class="marginB">
+<span class="chave"><</span><span class="tag">ol</span><span class="chave">></span>
+        <span class="chave"><</span><span class="tag">li</span><span class="chave">></span> <span class="textoSpan">Item</span> <span class="chave"><</span><span class="chave">/</span><span class="tag">li</span><span class="chave">></span>
+        <span class="chave"><</span><span class="tag">li</span><span class="chave">></span> <span class="textoSpan">Item</span> <span class="chave"><</span><span class="chave">/</span><span class="tag">li</span><span class="chave">></span>
+        <span class="chave"><</span><span class="tag">li</span><span class="chave">></span> <span class="textoSpan">Item</span> <span class="chave"><</span><span class="chave">/</span><span class="tag">li</span><span class="chave">></span>
+<span class="chave"><</span><span class="chave">/</span><span class="tag">ol</span><span class="chave">></span></pre>
+                    <div class="flex">
+                        <ol class="marginB">
+                            <li>Item </li>
+                            <li>Item </li>
+                            <li>Item </li>
+                        </ol>  
+                    </div>                 
+                    <p class="descSintaxe marginB">O elemento <span class="chave"><</span><span class="tag">ol</span><span class="chave">></span> é usado para criar listas ordenadas em HTML.</p>
+                    <p class="descSintaxe marginB">É uma lista de itens onde a ordem dos itens não é significativa. Cada item da lista é representado pelo elemento <span class="chave"><</span><span class="tag">li</span><span class="chave">></span> (item de lista)</p>
+                    <p class="descSintaxe ">Uma lista ordenada é uma lista de itens onde a ordem dos itens é significativa e geralmente exibida com números ou letras para indicar a sequência.</p>
+            </div>
+        </div>
             </div>
             </div>
        </div>
@@ -349,15 +424,18 @@ function imagem(){
     inputs.style.display = 'none'
     tabela.style.display = 'none'
     texto.style.display = 'none'
+    estrutura.style.display = 'none'
     ancora.style.display = 'none'
+    lista.style.display = 'none'
 }
 function input(){
     inputs.style.display = 'block'
     imagens.style.display = 'none'
     tabela.style.display = 'none'
     texto.style.display = 'none'
+    estrutura.style.display = 'none'
     ancora.style.display = 'none'
-
+    lista.style.display = 'none'
 
 }
 function tabelas(){
@@ -365,8 +443,9 @@ function tabelas(){
     inputs.style.display = 'none'
     imagens.style.display = 'none'
     texto.style.display = 'none'
+    estrutura.style.display = 'none'
     ancora.style.display = 'none'
-
+    lista.style.display = 'none'
 }
 function textos(){
     texto.style.display = 'block'
@@ -374,9 +453,31 @@ function textos(){
     inputs.style.display = 'none'
     imagens.style.display = 'none'
     ancora.style.display = 'none'
+    estrutura.style.display = 'none'
+    lista.style.display = 'none'
 }
 function ancoras(){
     ancora.style.display = 'block'
+    texto.style.display = 'none'
+    tabela.style.display = 'none'
+    inputs.style.display = 'none'
+    imagens.style.display = 'none'
+    estrutura.style.display = 'none'
+    lista.style.display = 'none'
+}
+function estruturaHtml(){
+    estrutura.style.display = 'block'
+    ancora.style.display = 'none'
+    texto.style.display = 'none'
+    tabela.style.display = 'none'
+    inputs.style.display = 'none'
+    lista.style.display = 'none'
+    imagens.style.display = 'none'
+}
+function listas(){
+    lista.style.display = 'block'
+    estrutura.style.display = 'none'
+    ancora.style.display = 'none'
     texto.style.display = 'none'
     tabela.style.display = 'none'
     inputs.style.display = 'none'

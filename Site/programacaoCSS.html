@@ -23,7 +23,7 @@
                 <ul>
                     <li><a href="./index.html">HOME</a></li>
                     <div class="headerClick">
-                        <li><button onclick="executar()">PROGRAMAÇÃO</button></li>
+                        <li><button onclick="executar()">FRONT-END</button></li>
                         <div id="sumir" class="sumirAparecer">
                             <a href="./programacaoHTML.html">HTML</a>
                             <a href="./programacaoCSS.html">CSS</a>
@@ -43,23 +43,155 @@
     <main>
        <div class="menu-lateral">
         <h2>CSS</h2>
-        <button class="btnPrincipal"><h3 class="titulo-menuLateral">Historia</h3></button>
-        <div id="sumirHistoria" class="historia">
-        </div>
         <button onclick="sumir1()" id="botaoPrincipal" class="btnPrincipal"><h3 class="titulo-menuLateral">Atributos<i class='bx bxs-down-arrow'></i></h3></button>
         <div id="sumirElemento" class="elementos">
-            <button class="subTitulo">IMAGENS</button>
-            <button class="subTitulo">INPUTS</button>
-            <button class="subTitulo">TABELAS</button>
-            <button class="subTitulo">TEXTOS</button>
-            <button class="subTitulo">ÂNCORA</button>
-            <button class="subTitulo">TAGS SEMÂNTICAS</button>
+            <button onclick="texts()" class="subTitulo">text</button>
+            <button onclick="backgrounds()" class="subTitulo">background</button>
+            <button class="subTitulo">border</button>
+            <button class="subTitulo">display</button>
+            <button class="subTitulo">margin e padding</button>
         </div>
        </div>
        <div class="conteudoDireita">
         
-            <div id="imagens">
+            <div id="text">
+                <h3>ESTILIZAÇÃO DE TEXTOS</h3>
+                <p class="textos marginB">A estilização de textos em CSS envolve a aplicação de estilos a elementos de texto, como títulos, parágrafos, links e outros. </p>
+                <h4 class="tituloSintaxe">Sintaxe</h4>
+                <div class="flex">
+                        <div class="sintaxe">
+                            <pre class="marginB">
+<span class="tag">p</span> <span class="chave">{</span>
+        <span class="atributo">font-family</span><span class="chave">:</span> <span class="textoSpan">Arial, sans-serif</span><span class="chave">;</span>
+<span class="chave">}</span>
+</pre>
+                            <p class="descSintaxe"><span class="atributo">font-family</span>: Define a fonte a ser usada para o texto. </p>
+                    </div>
+                    <div class="sintaxe">
+                        <pre class="marginB">
+<span class="tag">h1</span> <span class="chave">{</span>
+        <span class="atributo">font-size</span><span class="chave">:</span> <span class="textoSpan">24px</span><span class="chave">;</span>
+<span class="chave">}</span>
+</pre>
+                        <p class="descSintaxe marginB"><span class="atributo">font-size</span>: Define o tamanho do texto. </p>
+                        <p class="descSintaxe"><span class="textoSpan">24px</span>: Tamanho fixo em pixels. </p>
+                        <p class="descSintaxe"><span class="textoSpan">2rem</span>: Um valor relativo à fonte do elemento raiz. </p>
+                </div>
+                <div class="sintaxe">
+                    <pre class="marginB">
+<span class="tag">strong</span> <span class="chave">{</span>
+            <span class="atributo">font-weight</span><span class="chave">:</span> <span class="textoSpan">bold</span><span class="chave">;</span>
+<span class="chave">}</span>
+</pre>
+                    <p class="descSintaxe marginB"><span class="atributo">font-weight</span>: Controla a espessura do texto. </p>
+                    <p class="descSintaxe"><span class="textoSpan">bold</span>: Aumenta a espessura da fonte. </p>
+                    <p class="descSintaxe"><span class="textoSpan">lighter</span>: Diminui a espessura do texto. </p>
+            </div>
+            <div class="sintaxe">
+                <pre class="marginB">
+<span class="tag">h2</span> <span class="chave">{</span>
+        <span class="atributo">font-style</span><span class="chave">:</span> <span class="textoSpan">italic</span><span class="chave">;</span>
+<span class="chave">}</span>
+</pre>
+                <p class="descSintaxe "><span class="atributo">font-style</span>: Define o estilo do texto. </p>
+        </div>
+        <div class="sintaxe">
+            <pre class="marginB">
+<span class="tag">h3</span> <span class="chave">{</span>
+        <span class="atributo">color</span><span class="chave">:</span> <span class="textoSpan">#fff</span><span class="chave">;</span>
+<span class="chave">}</span>
+</pre>
+            <p class="descSintaxe marginB"><span class="atributo">color</span>: Define a cor texto. </p>
+            <p class="descSintaxe"><span class="textoSpan">red</span>: Nome da cor em inglês. </p>
+            <p class="descSintaxe"><span class="textoSpan">#fff</span>: Código hexadecimal da cor. </p>
+            <p class="descSintaxe"><span class="textoSpan">rgb(255, 0, 0)</span>: Código RGB da cor. </p>
+    </div>
+    <div class="sintaxe">
+        <pre class="marginB">
+<span class="tag">p</span> <span class="chave">{</span>
+        <span class="atributo">text-align</span><span class="chave">:</span> <span class="textoSpan">center</span><span class="chave">;</span>
+<span class="chave">}</span>
+</pre>
+        <p class="descSintaxe marginB"><span class="atributo">text-align</span>: Alinha o texto. </p>
+        <p class="descSintaxe"><span class="textoSpan">left</span>: Alinha o texto a esquerda. </p>
+        <p class="descSintaxe"><span class="textoSpan">right</span>: Alinha o texto a direita. </p>
+        <p class="descSintaxe"><span class="textoSpan">center</span>: Alinha o texto ao centro. </p>
+</div>
+<div class="sintaxe">
+    <pre class="marginB">
+<span class="tag">p</span> <span class="chave">{</span>
+    <span class="atributo">text-decoration</span><span class="chave">:</span> <span class="textoSpan">line-through</span><span class="chave">;</span>
+<span class="chave">}</span>
+</pre>
+    <p class="descSintaxe marginB"><span class="atributo">text-decoration</span>: Define a decoração do texto. </p>
+    <p class="descSintaxe"><span class="textoSpan">none</span>: Valor padrão. </p>
+    <p class="descSintaxe"><span class="textoSpan">underline</span>: Adiciona uma linha de sublinhado sob o texto. </p>
+    <p class="descSintaxe"><span class="textoSpan">overline</span>: Adiciona uma linha sobre o texto. </p>
+    <p class="descSintaxe"><span class="textoSpan">line-through</span>: Adiciona uma linha através do texto, criando um efeito de "riscado". </p>
+</div>
+<div class="sintaxe">
+    <pre class="marginB">
+<span class="tag">h5</span> <span class="chave">{</span>
+    <span class="atributo">text-transform</span><span class="chave">:</span> <span class="textoSpan">uppercase</span><span class="chave">;</span>
+<span class="chave">}</span>
+</pre>
+    <p class="descSintaxe marginB"><span class="atributo">text-transform</span>: Define a transformação do texto. </p>
+    <p class="descSintaxe"><span class="textoSpan">none</span>: Valor padrão. </p>
+    <p class="descSintaxe"><span class="textoSpan">uppercase</span>: Transforma o texto em Maiúsculo. </p>
+    <p class="descSintaxe"><span class="textoSpan">lowercasse</span>: Transforma o texto em Minústuco. </p>
 
+</div>
+                </div>
+            </div>
+            <div id="background">
+                <h3>BACKGROUND</h3>
+                <p class="textos marginB">Em CSS, o background é uma propriedade que permite controlar o plano de fundo de um elemento HTML.</p>
+                <h4 class="tituloSintaxe">Sintaxe</h4>
+                <div class="flex">
+                        <div class="sintaxe">
+<pre class="marginB">
+<span class="tag">elemento</span> <span class="chave">{</span>
+        <span class="atributo">background-color</span><span class="chave">:</span> <span class="textoSpan">#000</span><span class="chave">;</span>
+<span class="chave">}</span>
+</pre>
+            <p class="descSintaxe marginB">Essa tag do css coloca uma cor no fundo</p>
+            <p class="descSintaxe"><span class="textoSpan">red</span>: Nome da cor em inglês. </p>
+            <p class="descSintaxe"><span class="textoSpan">#000</span>: Código hexadecimal da cor. </p>
+            <p class="descSintaxe"><span class="textoSpan">rgb(255, 0, 0)</span>: Código RGB da cor. </p>
+                    </div>
+                    <div class="sintaxe">
+<pre class="marginB">
+<span class="tag">elemento</span> <span class="chave">{</span>
+        <span class="atributo">background-image</span><span class="chave">:</span> <span class="string">url</span><span class="chave">(</span><span class="textoSpan">'sua-imagem.png'</span><pan class="chave">)</pan><span class="chave">;</span>
+<span class="chave">}</span>
+</pre>
+            <p class="descSintaxe marginB">Use esta subpropriedade para definir uma imagem de fundo para o elemento. Você deve fornecer a URL da imagem que deseja usar como plano de fundo.</p>
+                     </div>
+                    <div class="sintaxe">
+<pre class="marginB">
+<span class="tag">elemento</span> <span class="chave">{</span>
+        <span class="atributo">background-repeat</span><span class="chave">:</span> <span class="textoSpan">no-repeat</span><span class="chave">;</span>
+<span class="chave">}</span>
+</pre>
+            <p class="descSintaxe marginB">Essa subpropriedade determina como a imagem de fundo é repetida ou não. Valores comuns incluem repeat, no-repeat, repeat-x e repeat-y.</p>
+                     </div>
+                <div class="sintaxe">
+<pre class="marginB">
+<span class="tag">elemento</span> <span class="chave">{</span>
+        <span class="atributo">background-size</span><span class="chave">:</span> <span class="textoSpan">contain</span><span class="chave">;</span>
+<span class="chave">}</span>
+</pre>
+            <p class="descSintaxe marginB">Essa subpropriedade controla o tamanho da imagem de fundo. Você pode definir dimensões específicas, usar palavras-chave como <span class="textoSpan">cover</span> ou <span class="textoSpan">contain</span>, ou especificar porcentagens.</p>
+                     </div>
+                     <div class="sintaxe">
+<pre class="marginB">
+<span class="tag">elemento</span> <span class="chave">{</span>
+        <span class="atributo">background-position</span><span class="chave">:</span> <span class="textoSpan">center top</span><span class="chave">;</span>
+<span class="chave">}</span>
+</pre>
+            <p class="descSintaxe marginB">Define a posição inicial da imagem de fundo. Você pode usar palavras-chave como <span class="textoSpan">top</span>, <span class="textoSpan">center</span>, <span class="textoSpan">right</span>, <span class="textoSpan">bottom</span>, <span class="textoSpan">left</span>, ou valores específicos como porcentagens ou pixels.</p>
+                     </div>
+                </div>
             </div>
        </div>
     </main>
@@ -70,7 +202,7 @@
                  <p class="footerTitulo">Navegação</p>
                  <ul>
                      <li><a href="./index.html">HOME</a></li>
-                     <li><a href="#">PROGRAMAÇÃO</a></li>
+                     <li><a href="#">FRONT-END</a></li>
                      <li><a href="#">QUIZ</a></li>
                      <li><a href="#">SOBRE NÓS</a></li>
                  </ul>
@@ -94,5 +226,13 @@ function sumir1() {
         botaoPrincipal.innerHTML = `<h3 class="titulo-menuLateral">Atributos<i class='bx bxs-right-arrow'></i></h3>`
         sumirElemento.style.display = 'block'
     }
+}
+function texts(){
+    text.style.display = 'block'
+    background.style.display = 'none'
+}
+function backgrounds(){
+    background.style.display = 'block'
+    text.style.display = 'none'
 }
 </script>
