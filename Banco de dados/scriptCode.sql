@@ -32,3 +32,6 @@ fkUsuario int,
 constraint fkUjs foreign key (fkUsuario)
 	references usuario(idUsuario)
 );
+
+
+select * from usuario;

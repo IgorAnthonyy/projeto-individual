@@ -2,34 +2,36 @@ main{
     padding: 20px;
     display: flex;
     justify-content: center;
+    background-color: #3f3f3f;
     align-items: center;
+    gap: 20px;
 }
-.loginBox{
+.cadastroBox{
     text-align: center;
     width: 550px;
-    background-color: #686868;
     padding: 40px;
-    color: #fff;
     border-radius: 10px;
+    color: #fff;
 }
 .inputs input {
     width: 530px;
     font-size: 18px;
     padding: 8px 3px;
-    margin-bottom: 30px;
+    margin-bottom: 10px;
 }
 .inputs input::placeholder {
-    padding-left: 5px;
+    padding-left: 2px;
 }
-.loginBox h2 {
+.cadastroBox h2 {
     font-size: 44px;
     margin-bottom: 30px;
 }
 .inputs p {
     text-align: left;
 }
-.loginBox button{
-    margin-top: 30px;
+.cadastroBox button{
+    margin-top: 10px;
+    box-shadow: 0px 3px 40px 10px #0097b27e;
     cursor: pointer;
     padding: 10px;
     background-color: #0097B2;
@@ -39,8 +41,4 @@ main{
     font-weight: bold;
     width: 100%;
     transition: 0.5s;
-}
-.loginBox button:hover {
-    background-color: #fff;
-    color: #0097B2;
 }

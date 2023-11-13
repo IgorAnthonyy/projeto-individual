@@ -1,0 +1,94 @@
+main {
+    background-color: #3f3f3f;
+}
+.colSobre1 {
+    padding-top: 30px;
+    text-align: center;
+    width: 80%;
+    margin: 0 auto;
+}
+.subTitulo {
+    color: #ffffff;
+    font-size: 30px;
+    font-weight: 400;
+    text-align: center;
+    padding-bottom: 20px;
+}
+.colSobre2 {
+    text-align: center;
+    padding: 40px;
+}
+.colSobre2 h2 {
+    color: #00d9ff;
+    font-size: 38px;
+    padding-bottom: 10px;
+}
+.flex {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+.bx {
+    font-size: 100px;
+    color: #fff;
+    
+}
+.box {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    border-radius: 10px;
+    background-color: #777777;
+    padding: 10px;
+    width: 25%;
+    transition: 0.2s;
+    color: #fff;
+
+}
+.box h3 {
+    font-size: 35px;
+    padding-bottom: 20px;
+}
+.texto {
+    font-size: 20px;
+}
+.bx-chevron-right {
+    font-size: 20px;
+}
+.box:hover {
+    background-color: #0097B2;
+    border: 1px solid #fff;
+}
+.colSobre3, .colSobre4{
+    text-align: center;
+    padding: 20px;
+}
+.colSobre3, .colSobre4 h2 {
+    color: #00d9ff;
+    padding-bottom: 20px;
+    font-size: 38px;
+}
+.boxSobre {
+    width: 80%;
+    padding: 20px;
+    border-radius: 10px;
+    margin: 0 auto;
+    font-size: 16px;
+    color: #ffffff;
+    overflow-x: hidden;
+    overflow-y: hidden;
+    height: 100px;
+    transition: 0.2s;
+}
+.boxSobre p{
+    text-align: left;
+    word-spacing: 5px;
+    line-height: 30px;
+    margin-bottom: 15px;
+}
+.boxSobre:hover {
+    background-color: #0097B2;
+    color: white;
+    font-size: 20px;
+    height: 100%;
+}

@@ -52,7 +52,7 @@ main {
     padding-right: 15px;
 }
 
-#ondeComecou, #imagens, #inputs, #tabela, #texto, #text, #background, #ancora, #estrutura, #lista h3{
+#ondeComecou, #imagens, #inputs, #tabela, #display,#texto, #marginEpadding,#border ,#text, #background, #ancora, #estrutura, #lista h3{
     color: #00d9ff;
     font-size: 30px;
     margin-bottom: 20px;
@@ -126,6 +126,10 @@ main {
     font-size: 18px;
     letter-spacing: 1px;
     word-spacing: 2px;
+}
+.comentario {
+    color: #cccccc;
+    font-size: 14px;
 }
 .flex {
     justify-content: center;
@@ -257,7 +261,7 @@ tfoot {
 /* css da pagina de text */
 
 #text {
-    display: none;
+    display: block;
 }
 #text pre {
     line-height: 30px;
@@ -273,6 +277,43 @@ tfoot {
     display: none;
 }
 #background pre {
+    line-height: 30px;
+    background-color: #535353;
+    border-radius: 10px;
+    padding: 5px;
+    font-size: 20px;
+}
+
+/* css border */
+
+#border {
+    display: none;
+}
+#border pre {
+    line-height: 30px;
+    background-color: #535353;
+    border-radius: 10px;
+    padding: 5px;
+    font-size: 20px;
+}
+/* css display */
+
+#display {
+    display: none;
+}
+#display pre {
+    line-height: 30px;
+    background-color: #535353;
+    border-radius: 10px;
+    padding: 5px;
+    font-size: 20px;
+}
+/* css display */
+
+#marginEpadding {
+    display: none;
+}
+#marginEpadding pre {
     line-height: 30px;
     background-color: #535353;
     border-radius: 10px;

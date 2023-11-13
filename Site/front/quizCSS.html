@@ -16,17 +16,16 @@
     <header class="cabecalho">
         <div class="container">
             <div class="logo">
-                <img src="./img/CodeCraft-removebg-preview.png" alt="">
+                <img src="./img/CodeCraft__2_-removebg-preview.png" alt="">
             </div>
             <nav class="cabecalho-navbar">
                 <ul>
                     <li><a href="./index.html">HOME</a></li>
                     <div class="headerClick">
-                        <li><button onclick="executar()">FRONT-END</button></li>
+                        <li><button onclick="executar()">HTML & CSS</button></li>
                         <div id="sumir" class="sumirAparecer">
                             <a href="./programacaoHTML.html">HTML</a>
-                            <a href="">CSS</a>
-                            <a href="">JAVASCRIPT</a>
+                            <a href="./programacaoCSS.html">CSS</a>
                         </div>
                     </div>
                     <li><a href="./quiz.html">QUIZ</a></li>
@@ -42,58 +41,58 @@
     <main>
         <form id="quiz-form">
             <div class="boxQuiz">
-                <p>Como que todo código de HTML começa?</p>
-                <input type="radio" name="q1" value="errado"><label>< head > </ head ></label><br>
-                <input type="radio" name="q1" value="errado"><label>< ! DOCTYPE html ></label><br>
-                <input type="radio" name="q1" value="certo"><label>< html ></ html ></label><br>
+                <p>O que significa a sigla CSS?</p>
+                <input type="radio" name="q1" value="errado"><label>Computer Style Sheets</label><br>
+                <input type="radio" name="q1" value="certo"><label>Cascading Style Sheets</label><br>
+                <input type="radio" name="q1" value="errado"><label>Creative Style System</label><br>
             </div>
             <div class="boxQuiz">
-                <p>Qual tag que defini o título de uma página em HTML?</p>
-                <input type="radio" name="q2" value="certo"><label>< title ></ title ></label><br>
-                <input type="radio" name="q2" value="errado"><label>< name ></ name ></label><br>
-                <input type="radio" name="q2" value="errado"><label>< page ></ page > </label><br>
+                <p>Qual propriedade CSS é usada para definir a cor do texto?</p>
+                <input type="radio" name="q2" value="certo"><label>color</label><br>
+                <input type="radio" name="q2" value="errado"><label>text-color</label><br>
+                <input type="radio" name="q2" value="errado"><label>font-color</label><br>
             </div>
             <div class="boxQuiz">
-                <p>Para que serve a tag < head ></ head >?</p>
-                <input type="radio" name="q3" value="errado"><label>Para nomerar o website.</label><br>
-                <input type="radio" name="q3" value="certo"><label>Para adicionar coisas na cabeça do Website.</label><br>
-                <input type="radio" name="q3" value="errado"><label>Para trocar a cor.</label><br>
+                <p>Como você define uma borda de 2 pixels de largura, sólida e vermelha em um elemento?</p>
+                <input type="radio" name="q3" value="errado"><label>border-width: 2px solid red;</label><br>
+                <input type="radio" name="q3" value="errado"><label>border-style: 2px solid red;</label><br>
+                <input type="radio" name="q3" value="certo"><label>border: 2px solid red;</label><br>
             </div>
             <div class="boxQuiz">
-                <p>O que significa a sigla "HTML"?</p>
-                <input type="radio" name="q4" value="certo"><label>"HTML" significa "Hypertext Markup Language" (Linguagem de Marcação de Hipertexto).</label><br>
-                <input type="radio" name="q4" value="errado"><label>"HTML" significa "History marketing Language".</label><br>
-                <input type="radio" name="q4" value="errado"><label>Nenhuma das alternativass.</label><br>
+                <p>Qual valor de display faz com que um elemento seja exibido em linha e permita ajustar largura e altura?</p>
+                <input type="radio" name="q4" value="errado"><label>display: inline;</label><br>
+                <input type="radio" name="q4" value="certo"><label>display: inline-block;</label><br>
+                <input type="radio" name="q4" value="errado"><label>display: flex;</label><br>
             </div>
             <div class="boxQuiz">
-                <p>Qual elemento HTML é usado para criar uma hiperligação?</p>
-                <input type="radio" name="q5" value="errado"><label>O elemento < a > é usado para alterar o texto.</label><br>
-                <input type="radio" name="q5" value="certo"><label>O elemento < a > é usado para criar hiperligações (links).</label><br>
-                <input type="radio" name="q5" value="errado"><label>O elemento < a > é utilizado para criar tabelas.</label><br>
+                <p>Qual propriedade CSS é usada para centralizar um elemento horizontalmente?</p>
+                <input type="radio" name="q5" value="errado"><label>align: center;</label><br>
+                <input type="radio" name="q5" value="errado"><label>horizontal-align: center;</label><br>
+                <input type="radio" name="q5" value="certo"><label>margin: auto;</label><br>
             </div>
             <div class="boxQuiz">
-                <p>Qual tag HTML é usada para criar uma lista não ordenada?</p>
-                <input type="radio" name="q6" value="errado"><label>< main ></ main ><br>
-                <input type="radio" name="q6" value="errado"><label>< p ></ p ><br>
-                <input type="radio" name="q6" value="certo"><label>< ul ></ ul ></label><br>
+                <p>Qual propriedade CSS é usada para ocultar um elemento na tela?</p>
+                <input type="radio" name="q6" value="errado"><label>visibility: hidden;<br>
+                    <input type="radio" name="q6" value="errado"><label>opacity: 0;</label><br>
+                    <input type="radio" name="q6" value="certo"><label>display: none;<br>
             </div>
             <div class="boxQuiz">
-                <p>Qual é o elemento HTML usado para criar um formulário?</p>
-                <input type="radio" name="q7" value="errado"><label>< section ></ section ></label><br>
-                <input type="radio" name="q7" value="errado"><label>< div ></ div ></label><br>
-                <input type="radio" name="q7" value="certo"><label>< form ></ form ></label><br>
+                <p>Como selecionar todos os elementos < p > dentro de uma < div > com a classe "conteudo"?</p>
+                <input type="radio" name="q7" value="certo"><label>.conteudo p { }</label><br>
+                <input type="radio" name="q7" value="errado"><label>div .p { }</label><br>
+                <input type="radio" name="q7" value="errado"><label>.conteudo > p { }</label><br>
             </div>
             <div class="boxQuiz">
-                <p>Qual tag HTML é usada para marcar um cabeçalho de nível 1?</p>
-                <input type="radio" name="q8" value="certo"><label>< h1 ></ h1 ></label><br>
-                <input type="radio" name="q8" value="errado"><label>< header ></ header ></label><br>
-                <input type="radio" name="q8" value="errado"><label>< nav ></ nav ></label><br>
+                <p>Como definir um gradiente linear como plano de fundo, indo de vermelho para azul, em um elemento??</p>
+                <input type="radio" name="q8" value="errado"><label>background-color: linear-gradient(red, blue);</label><br>
+                <input type="radio" name="q8" value="certo"><label>background: linear-gradient(red, blue);</label><br>
+                <input type="radio" name="q8" value="errado"><label>gradient: linear(red, blue);</label><br>
             </div>
             <div class="boxQuiz">
-                <p>Qual tag HTML é utilziada para inserir imagens?</p>
-                <input type="radio" name="q9" value="certo"><label>< img ></label><br>
-                <input type="radio" name="q9" value="errado"><label>< footer ></ footer ></label><br>
-                <input type="radio" name="q9" value="errado"><label>< meta ></label><br>
+                <p>Como definir uma fonte personalizada para um elemento em CSS?</p>
+                <input type="radio" name="q9" value="errado"><label>typeface: custom-font;</label><br>
+                <input type="radio" name="q9" value="errado"><label>font: custom-font;</label><br>
+                <input type="radio" name="q9" value="certo"><label>font-family: 'custom-font', sans-serif;</label><br>
             </div>
             <div class="boxQuiz enviar">
 
@@ -110,7 +109,7 @@
                  <p class="footerTitulo">Navegação</p>
                  <ul>
                      <li><a href="./index.html">HOME</a></li>
-                     <li><a href="#">PROGRAMAÇÃO</a></li>
+                     <li><a href="#">HTML & CSS</a></li>
                      <li><a href="#">QUIZ</a></li>
                      <li><a href="#">SOBRE NÓS</a></li>
                  </ul>

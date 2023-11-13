@@ -6,7 +6,7 @@
 .cabecalho {
     top: 0;
     position: sticky;
-    background-color: #fff;
+    background-color: #0097B2;
     width: 100%;
     box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px, rgba(60, 64, 67, 0.15) 0px 1px 3px 1px;
 }
@@ -26,7 +26,7 @@
 .cabecalho-navbar ul li a, button {
     text-decoration: none;
     padding: 10px;
-    color: #333333;
+    color: #ffffff;
     font-size: 18px;
     border: none;
     background-color: transparent;
@@ -39,23 +39,23 @@
     text-decoration: none;
 }
 .cabecalho-navbar ul li a:hover {
-    background-color: #0097B2;
-    color: #fff;
+    background-color: #00798f;
+    color: #ffffff;
 }
 .cabecalho-navbar ul li button:hover {
-    background-color: #0097B2;
+    background-color: #00798f;
     color: #fff;
 }
 .cadastroElogin .cadastro {
-    color: #333333;
+    color: #ffffff;
     margin-right: 20px;
     font-size: 18px;
 
 }
 .cadastroElogin .login {
-    background-color: #0097B2;
+    background-color: #ffffff;
     padding: 10px 30px;
-    color: #fff;
+    color: #000000;
     font-size: 18px;
     border-radius: 5px;
 }
@@ -67,18 +67,18 @@
 .sumirAparecer a {
     display: block;
     text-decoration: none;
-    color: #333333;
+    color: #ffffff;
     font-size: 18px;
     margin-top: 20px;
     padding: 10px;
 }
 .sumirAparecer a:hover {
-    background-color: #0097B2;
-    color: #fff;
+    background-color: #00798f;
+    color: #ffffff;
 }
 .sumirAparecer{
     display: none;
-    background-color: #fff;
+    background-color: #0097B2;
     padding: 10px;
     position: absolute;
 }

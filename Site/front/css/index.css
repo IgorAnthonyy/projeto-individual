@@ -3,6 +3,7 @@ body{
     box-sizing: border-box;
 }
 main {
+    background-color: #3f3f3f;
     width: 100%;
 }
 main .banner {
@@ -15,7 +16,7 @@ main .banner {
 }
 .titulo {
     font-size: 44px;
-    color: #0097B2;
+    color: #00d9ff;
     text-align: center;
     padding: 30px 0;
 }
@@ -28,7 +29,7 @@ main .banner {
 }
 .texto {
     font-size: 23px;
-    color: #616161;
+    color: #ffffff;
 }
 .containerLinguagens{
     width: 60%;
@@ -46,5 +47,5 @@ main .banner {
 }
 .cardLinguagens .bx {
     font-size: 100px;
-    color: #0097B2;
+    color: #00d9ff;
 }

@@ -17,17 +17,17 @@
     <header class="cabecalho">
         <div class="container">
             <div class="logo">
-                <img src="./img/CodeCraft-removebg-preview.png" alt="">
+                <img src="./img/CodeCraft__2_-removebg-preview.png" alt="">
             </div>
             <nav class="cabecalho-navbar">
                 <ul>
                     <li><a href="./index.html">HOME</a></li>
                     <div class="headerClick">
-                        <li><button onclick="executar()">FRONT-END</button></li>
+                        <li><button onclick="executar()">HTML & CSS</button></li>
                         <div id="sumir" class="sumirAparecer">
                             <a href="./programacaoHTML.html">HTML</a>
                             <a href="./programacaoCSS.html">CSS</a>
-                            <a href="./programacaoJS.html">JAVASCRIPT</a>
+
                         </div>
                     </div>
                     <li><a href="./quiz.html">QUIZ</a></li>
@@ -47,9 +47,9 @@
         <div id="sumirElemento" class="elementos">
             <button onclick="texts()" class="subTitulo">text</button>
             <button onclick="backgrounds()" class="subTitulo">background</button>
-            <button class="subTitulo">border</button>
-            <button class="subTitulo">display</button>
-            <button class="subTitulo">margin e padding</button>
+            <button onclick="borders()" class="subTitulo">border</button>
+            <button onclick="displays()" class="subTitulo">display</button>
+            <button onclick="paddingsEmargins()" class="subTitulo">margin e padding</button>
         </div>
        </div>
        <div class="conteudoDireita">
@@ -193,7 +193,95 @@
                      </div>
                 </div>
             </div>
-       </div>
+            <div id="border">
+                <h3>BORDER</h3>
+                <p class="textos marginB">é usada para definir as bordas de um elemento HTML. A propriedade <span class="tag">border</span> é uma propriedade abreviada que engloba várias outras propriedades relacionadas às bordas.</p>
+                <h4 class="tituloSintaxe">Sintaxe</h4>
+                <div class="flex">
+                        <div class="sintaxe">
+                            <pre class="marginB"><span class="tag">elemento</span>  <span class="chave">{</span>
+        <span class="atributo">border</span><span class="chave">:</span>  <span class="textoSpan">largura estilo cor</span><span class="chave">;</span>
+<span class="chave">}</span></pre>
+                            <p class="descSintaxe marginB"><span class="textoSpan">largura</span> É a largura da borda. Pode ser especificada em pixels, em unidades absolutas como em ou rem, ou usando porcentagens.</p>
+                            <p class="descSintaxe marginB"><span class="textoSpan">estilo</span> Define o estilo da borda, como solid (linha contínua), dashed (tracejado), dotted (pontilhado), etc.</p>
+                            <p class="descSintaxe marginB"><span class="textoSpan">cor</span> Especifica a cor da borda. Pode ser um nome de cor, um código hexadecimal, um valor RGB, etc.</p>
+                    </div>
+                    <div class="sintaxe">
+                        <pre class="marginB"><span class="tag">elemento</span>  <span class="chave">{</span>
+        <span class="atributo">border-width</span><span class="chave">:</span>  <span class="textoSpan">2px</span><span class="chave">;</span>
+        <span class="atributo">border-style</span><span class="chave">:</span>  <span class="textoSpan">solid</span><span class="chave">;</span>
+        <span class="atributo">border-color</span><span class="chave">:</span>  <span class="textoSpan">red</span><span class="chave">;</span>
+<span class="chave">}</span></pre>
+                        <p class="descSintaxe marginB"><span class="textoSpan">border-width</span> Define a largura da borda.</p>
+                        <p class="descSintaxe marginB"><span class="textoSpan">border-style</span> Define o estilo da borda, como solid (linha contínua), dashed (tracejado), dotted (pontilhado), etc.</p>
+                        <p class="descSintaxe marginB"><span class="textoSpan">cor</span> Especifica a cor da borda. Pode ser um nome de cor, um código hexadecimal, um valor RGB, etc.</p>
+                </div>
+            </div>
+            </div>
+            <div id="display">
+                <h3>DISPLAY</h3>
+                <p class="textos marginB">A propriedade <span class="tag">display</span> em CSS é fundamental para controlar o layout e a formatação dos elementos HTML em uma página. Ela especifica como um elemento deve ser renderizado no layout do documento. </p>
+                <h4 class="tituloSintaxe">Sintaxe</h4>
+                <div class="flex">
+                        <div class="sintaxe">
+                            <pre class="marginB"><span class="tag">elemento</span>  <span class="chave">{</span>
+        <span class="atributo">display</span><span class="chave">:</span>  <span class="textoSpan">block</span><span class="chave">;</span>
+<span class="chave">}</span></pre>
+                            <p class="descSintaxe marginB"><span class="textoSpan">block</span> Este valor faz com que o elemento seja exibido como um bloco. Ele começa em uma nova linha e ocupa toda a largura disponível. Altura, margens e preenchimentos podem ser controlados.</p>
+                    </div>
+                    <div class="sintaxe">
+                        <pre class="marginB"><span class="tag">elemento</span>  <span class="chave">{</span>
+        <span class="atributo">display</span><span class="chave">:</span>  <span class="textoSpan">inline</span><span class="chave">;</span>
+<span class="chave">}</span></pre>
+                        <p class="descSintaxe marginB"><span class="textoSpan">inline</span> Este valor faz com que o elemento seja exibido em linha, sem quebrar para uma nova linha. Ele ocupa apenas o espaço necessário e não aceita largura, altura, margens superiores e inferiores.</p>
+                </div>
+                <div class="sintaxe">
+                    <pre class="marginB"><span class="tag">elemento</span>  <span class="chave">{</span>
+        <span class="atributo">display</span><span class="chave">:</span>  <span class="textoSpan">inline-block</span><span class="chave">;</span>
+<span class="chave">}</span></pre>
+                    <p class="descSintaxe marginB"><span class="textoSpan">inline-block</span> Combina as características de inline e block. O elemento é exibido em linha, mas você pode definir largura, altura e outros estilos de bloco.</p>
+                </div>
+                <div class="sintaxe">
+                    <pre class="marginB"><span class="tag">elemento</span>  <span class="chave">{</span>
+        <span class="atributo">display</span><span class="chave">:</span>  <span class="textoSpan">none</span><span class="chave">;</span>
+<span class="chave">}</span></pre>
+                    <p class="descSintaxe marginB"><span class="textoSpan">none</span> Este valor oculta completamente o elemento. O espaço que o elemento ocuparia ainda é reservado, mas o conteúdo não é renderizado.</p>
+                </div>
+                <div class="sintaxe">
+                    <pre class="marginB"><span class="tag">.container</span>  <span class="chave">{</span>
+        <span class="atributo">display</span><span class="chave">:</span>  <span class="textoSpan">flex</span><span class="chave">;</span>
+<span class="chave">}</span></pre>
+                    <p class="descSintaxe marginB"><span class="textoSpan">flex</span> Permite a criação de um modelo de layout flexível. Os elementos dentro de um contêiner flexível podem ser dispostos de maneira fácil e poderosa.</p>
+                </div>
+                </div>
+            </div>
+            <div id="marginEpadding">
+                <h3>MARGIN E PADDING</h3>
+                <p class="textos marginB">Em CSS, as propriedades <span class="tag">margin</span> e <span class="tag">padding</span> são usadas para controlar o espaçamento em torno e dentro de elementos HTML,</p>
+                <h4 class="tituloSintaxe">Sintaxe</h4>
+                <div class="flex">
+                        <div class="sintaxe">
+                            <pre class="marginB"><span class="tag">elemento</span>  <span class="chave">{</span>
+        <span class="atributo">margin</span><span class="chave">:</span>  <span class="textoSpan">10px</span><span class="chave">;</span>    <span class="comentario">/* Todos os lados com margem de 10 pixels */</span>
+        <span class="atributo">margin-left</span><span class="chave">:</span>  <span class="textoSpan">10px </span><span class="chave">;</span>    <span class="comentario">/* Margem a esquerda de 10px */</span>
+        <span class="atributo">margin-right</span><span class="chave">:</span>  <span class="textoSpan">30px </span><span class="chave">;</span>    <span class="comentario">/* Margem a direita de 30px */</span>
+        <span class="atributo">margin-top</span><span class="chave">:</span>  <span class="textoSpan">60px </span><span class="chave">;</span>    <span class="comentario">/* Margem superior de 60px */</span>
+        <span class="atributo">margin-bottom</span><span class="chave">:</span>  <span class="textoSpan">20px </span><span class="chave">;</span>    <span class="comentario">/* Margem inferior de 20px */</span>
+<span class="chave">}</span></pre>
+                            <p class="descSintaxe marginB"><span class="textoSpan">margin</span> Define o espaçamento externo de um elemento em relação aos elementos vizinhos. Pode aceitar valores para a margem superior, direita, inferior e esquerda, separados por espaços ou especificados individualmente.</p>
+                    </div>
+                    <div class="sintaxe">
+                        <pre class="marginB"><span class="tag">elemento</span>  <span class="chave">{</span>
+        <span class="atributo">padding</span><span class="chave">:</span>  <span class="textoSpan">10px</span><span class="chave">;</span>    <span class="comentario">/* Todos os lados com espaçamento interno de 10 pixels */</span>
+        <span class="atributo">padding-left</span><span class="chave">:</span>  <span class="textoSpan">10px </span><span class="chave">;</span>    <span class="comentario">/* Espaçamento interno a esquerda de 10px */</span>
+        <span class="atributo">padding-right</span><span class="chave">:</span>  <span class="textoSpan">30px </span><span class="chave">;</span>    <span class="comentario">/* Espaçamento interno a direita de 30px */</span>
+        <span class="atributo">padding-top</span><span class="chave">:</span>  <span class="textoSpan">60px </span><span class="chave">;</span>    <span class="comentario">/* Espaçamento interno superior de 60px */</span>
+        <span class="atributo">padding-bottom</span><span class="chave">:</span>  <span class="textoSpan">20px </span><span class="chave">;</span>    <span class="comentario">/* Espaçamento interno inferior de 20px */</span>
+<span class="chave">}</span></pre>
+                        <p class="descSintaxe marginB"><span class="textoSpan">padding</span>  Define o espaçamento interno de um elemento, isto é, o espaço entre a borda do elemento e seu conteúdo. Como margin, padding pode ser especificado para os lados superior, direito, inferior e esquerdo.</p>
+                </div>
+            </div>
+            </div>
     </main>
     <footer>
         <div class="container">
@@ -202,7 +290,7 @@
                  <p class="footerTitulo">Navegação</p>
                  <ul>
                      <li><a href="./index.html">HOME</a></li>
-                     <li><a href="#">FRONT-END</a></li>
+                     <li><a href="#">HTML & CSS</a></li>
                      <li><a href="#">QUIZ</a></li>
                      <li><a href="#">SOBRE NÓS</a></li>
                  </ul>
@@ -230,9 +318,41 @@ function sumir1() {
 function texts(){
     text.style.display = 'block'
     background.style.display = 'none'
+    border.style.display = 'none'
+    display.style.display = 'none'
+    marginEpadding.style.display = 'none'
+    
 }
 function backgrounds(){
     background.style.display = 'block'
+    text.style.display = 'none'
+    border.style.display = 'none'
+    display.style.display = 'none'
+    marginEpadding.style.display = 'none'
+
+}
+function borders(){
+    border.style.display = 'block'
+    background.style.display = 'none'
+    text.style.display = 'none'
+    display.style.display = 'none'
+    marginEpadding.style.display = 'none'
+
+}
+
+function displays(){
+    display.style.display = 'block'
+    border.style.display = 'none'
+    background.style.display = 'none'
+    text.style.display = 'none'
+    marginEpadding.style.display = 'none'
+
+}
+function paddingsEmargins(){
+    marginEpadding.style.display = 'block'
+    display.style.display = 'none'
+    border.style.display = 'none'
+    background.style.display = 'none'
     text.style.display = 'none'
 }
 </script>

@@ -6,27 +6,27 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="./css/header.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="stylesheet" href="./css/login.css">
+    <link rel="stylesheet" href="./css/quiz.css">
     <link rel="stylesheet" href="./css/footer.css">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Roboto+Condensed:wght@100;400;800&display=swap" rel="stylesheet">
-    <title>CodeCraft - login</title>
+    <title>CodeCraft - Quiz</title>
 </head>
 <body>
     <header class="cabecalho">
         <div class="container">
             <div class="logo">
-                <img src="./img/CodeCraft-removebg-preview.png" alt="">
+                <img src="./img/CodeCraft__2_-removebg-preview.png" alt="">
             </div>
             <nav class="cabecalho-navbar">
                 <ul>
                     <li><a href="./index.html">HOME</a></li>
                     <div class="headerClick">
-                        <li><button onclick="executar()">FRONT-END</button></li>
+                        <li><button onclick="executar()">HTML & CSS</button></li>
                         <div id="sumir" class="sumirAparecer">
                             <a href="./programacaoHTML.html">HTML</a>
-                            <a href="">CSS</a>
-                            <a href="">JAVASCRIPT</a>
+                            <a href="./programacaoCSS.html">CSS</a>
                         </div>
                     </div>
                     <li><a href="./quiz.html">QUIZ</a></li>
@@ -40,19 +40,10 @@
         </div>
     </header>
     <main>
-        <div class="loginBox">
-            <img width="150px" src="./img/Source code.gif" alt="">
-            <h2>Logar</h2>
-            <div class="inputs">
-                <p>E-mail:</p>
-                <input type="email" id="iptEmail" placeholder="insira seu email">
-                <div class="mensagemErro" id="erroEmail" style="display: none;">
-                    E-mail inválido <br>
-                  </div>
-                <p>Senha:</p>
-                <input type="password" placeholder="insira sua senha">
-            </div>
-            <button onclick="logar()">Entrar</button>
+        <h2 class="tituloQuiz">Escolha qual QUIZ deseja fazer:</h2>
+        <div class="containerEscolhas">
+            <a href="./quizHTML.html"><i style="color: rgb(255, 106, 51);" class='bx bxl-html5'></i></a>
+            <a href="./quizCSS.html"><i style="color: #68b6ff;" class='bx bxl-css3'></i></a>
         </div>
     </main>
     <footer>
@@ -62,7 +53,7 @@
                  <p class="footerTitulo">Navegação</p>
                  <ul>
                      <li><a href="./index.html">HOME</a></li>
-                     <li><a href="#">FRONT-END</a></li>
+                     <li><a href="#">HTML & CSS</a></li>
                      <li><a href="#">QUIZ</a></li>
                      <li><a href="#">SOBRE NÓS</a></li>
                  </ul>
@@ -77,16 +68,3 @@
      <script src="./js/header.js"></script>
 </body>
 </html>
-<script>
-    function logar(){
-        var email = iptEmail.value
-        if (email.indexOf('@') >= 0 && (email.endsWith('.com') || email.endsWith('.br') || email.endsWith('.school'))) {
-      erroEmail.style.display = 'none'
-      iptEmail.style.borderColor = 'transparent';
-    }
-    else {
-      erroEmail.style.display = 'block';
-      iptEmail.style.borderColor = 'red';
-    }
-    }
-</script>
