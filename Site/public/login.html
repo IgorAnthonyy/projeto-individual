@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="pt-br">
+
 <head>
     <meta charset="UTF-8">
     <link rel="icon" href="./img/CodeCraft-removebg-preview.png">
@@ -9,9 +10,11 @@
     <link rel="stylesheet" href="./css/login.css">
     <link rel="stylesheet" href="./css/footer.css">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Roboto+Condensed:wght@100;400;800&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Condensed:wght@100;400;800&display=swap"
+        rel="stylesheet">
     <title>CodeCraft - login</title>
 </head>
+
 <body>
     <header class="cabecalho">
         <div class="container">
@@ -48,45 +51,62 @@
                 <input type="email" id="iptEmail" placeholder="insira seu email">
                 <div class="mensagemErro" id="erroEmail" style="display: none;">
                     E-mail inválido <br>
-                  </div>
+                </div>
                 <p>Senha:</p>
-                <input type="password" placeholder="insira sua senha">
+                <input id="iptSenha" type="password" placeholder="insira sua senha">
             </div>
             <button onclick="logar()">Entrar</button>
         </div>
     </main>
     <footer>
         <div class="container">
-             <img src="./img/CodeCraft__2_-removebg-preview.png" alt="">
-             <div class="navegar">
-                 <p class="footerTitulo">Navegação</p>
-                 <ul>
-                     <li><a href="./index.html">HOME</a></li>
-                     <li><a href="#">HTML & CSS</a></li>
-                     <li><a href="#">QUIZ</a></li>
-                     <li><a href="#">SOBRE NÓS</a></li>
-                 </ul>
-             </div>
-             <div class="contato">
-                 <p class="footerTitulo">Contato</p>
-                 <i class='bx bxl-instagram'></i>
-                 <p class="footerTexto">codecraft@gmail.com</p>
-             </div>
+            <img src="./img/CodeCraft__2_-removebg-preview.png" alt="">
+            <div class="navegar">
+                <p class="footerTitulo">Navegação</p>
+                <ul>
+                    <li><a href="./index.html">HOME</a></li>
+                    <li><a href="#">HTML & CSS</a></li>
+                    <li><a href="#">QUIZ</a></li>
+                    <li><a href="#">SOBRE NÓS</a></li>
+                </ul>
+            </div>
+            <div class="contato">
+                <p class="footerTitulo">Contato</p>
+                <i class='bx bxl-instagram'></i>
+                <p class="footerTexto">codecraft@gmail.com</p>
+            </div>
         </div>
-     </footer>
-     <script src="./js/header.js"></script>
+    </footer>
+    <script src="./js/header.js"></script>
 </body>
+
 </html>
 <script>
-    function logar(){
-        var email = iptEmail.value
+    async function logar() {
+        var email = iptEmail.value;
+        var senha = iptSenha.value;
+
         if (email.indexOf('@') >= 0 && (email.endsWith('.com') || email.endsWith('.br') || email.endsWith('.school'))) {
-      erroEmail.style.display = 'none'
-      iptEmail.style.borderColor = 'transparent';
-    }
-    else {
-      erroEmail.style.display = 'block';
-      iptEmail.style.borderColor = 'red';
-    }
+            erroEmail.style.display = 'none'
+            iptEmail.style.borderColor = 'transparent';
+        }
+        else {
+            erroEmail.style.display = 'block';
+            iptEmail.style.borderColor = 'red';
+        }
+
+
+        var resultado = await fetch("/usuario/login", {
+            method: "POST",
+            headers: {
+                "Content-Type": "application/json"
+            },
+            body: JSON.stringify({
+                email: email,
+                senha: senha
+            })
+        });
+
+        console.log(await resultado.json());
     }
 </script>
