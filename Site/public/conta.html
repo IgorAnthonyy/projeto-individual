@@ -9,6 +9,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
     <link rel="stylesheet" href="./css/conta.css">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
     <link rel="stylesheet" href="./css/footer.css">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Roboto+Condensed:wght@100;400;800&display=swap"
@@ -103,7 +104,32 @@
             </div>
         </div>
         <div id="analytics">
-            
+            <div class="kpis">
+                <div class="box">
+                    <h3>Quantidade de Quiz realizado</h3>
+                    <h5>5</h5>
+                </div>
+                <div class="box">
+                    <h3>Quantidade de Quiz de Html realizado</h3>
+                    <h5>5</h5>
+                </div>
+                <div class="box">
+                    <h3>Quantidade de Quiz de Css realizado</h3>
+                    <h5>5</h5>
+                </div>
+            </div>
+            <div class="graficosGeral">
+                <div class="graficos">
+                    <h3>Quiz HTML</h3>
+                    <canvas id="myChart"></canvas>
+                  </div>
+                  <div class="graficos">
+                    <h3>Quiz CSS</h3>
+                    <canvas id="myChart2"></canvas>
+                  </div>
+            </div>
+               
+            </div>
     </main>
     
     <footer>
@@ -130,6 +156,48 @@
 
 </html>
 <script>
+    const ctx = document.getElementById('myChart');
+    new Chart(ctx, {
+      type: 'bar',
+      data: {
+          labels: ['Tentativa 1', 'Tentativa 2', 'Tentativa 3'],
+          datasets: [{
+              label: 'Acertos',
+              backgroundColor: '#00d9ff',
+              data: [7, 4, 9],
+              borderWidth: 1,
+            },
+            {
+                label: 'Erros',
+                backgroundColor: 'rgb(255, 83, 83)',
+                data: [2, 5, 0],
+                borderWidth: 1,
+            }
+
+    ]
+}, 
+    });
+    const ctx2 = document.getElementById('myChart2');
+    new Chart(ctx2, {
+      type: 'bar',
+      data: {
+          labels: ['Tentativa 1', 'Tentativa 2', 'Tentativa 3'],
+          datasets: [{
+              label: 'Acertos',
+              backgroundColor: '#00d9ff',
+              data: [7, 4, 9],
+              borderWidth: 1,
+            },
+            {
+                label: 'Erros',
+                backgroundColor: 'rgb(255, 83, 83)',
+                data: [2, 5, 0],
+                borderWidth: 1,
+            }
+
+    ]
+}, 
+    });
     function dado() {
         dados.style.display = 'block'
         analytics.style.display = 'none'

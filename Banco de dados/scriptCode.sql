@@ -1,4 +1,5 @@
-drop database codecraft;
+create database codecraft;
+
 
 use codecraft;
 
@@ -37,14 +38,6 @@ qtdDeAcertos int,
 qtdDeErros int,
 fkUsuario int,
 constraint fkUcss foreign key (fkUsuario)
-	references usuario(idUsuario)
-);
-create table quizJs (
-idTentativa int primary key auto_increment,
-qtdDeAcertos int,
-qtdDeErros int,
-fkUsuario int,
-constraint fkUjs foreign key (fkUsuario)
 	references usuario(idUsuario)
 );
 

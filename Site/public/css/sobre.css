@@ -92,3 +92,11 @@ main {
     font-size: 20px;
     height: 100%;
 }
+.box img {
+    border-radius: 50%;
+    width: 150px;
+    margin: 0 auto;
+}
+.semMargin {
+    margin-top: 20px;
+}
