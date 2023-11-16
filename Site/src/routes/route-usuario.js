@@ -10,8 +10,7 @@ router.post('/login', (req, res) => {
 
 });
 router.post('/cadastro', (req, res) => {
-    console.log(req.body);
-     usuarioController.cadastrar(req, res);
+     usuarioController.cadastro(req, res);
 });
 
 

@@ -6,6 +6,10 @@ function validarSessao() {
     var bNome = document.getElementById("b_nome");
     var bEmail = document.getElementById("b_email")
     var usuarioNome = document.getElementById("usuario_nome")
+    var bTelefone = document.getElementById("b_telefone")
+    var bCidade = document.getElementById("b_cidade")
+    var bBairro = document.getElementById("b_bairro")
+    var bRua = document.getElementById("b_rua")
 
     if (email != null && nome != null) {
         user.style.display = 'flex'
@@ -13,6 +17,7 @@ function validarSessao() {
         bNome.innerHTML = nome
         usuarioNome.innerHTML = nome
         bEmail.innerHTML = email
+        bTelefone.innerHTML = telefone
     } 
 }
 function sair(){

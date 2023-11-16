@@ -51,6 +51,12 @@
     </div>
 </header>
   <main>
+    <div id="erroMsg" class="mensagemLogin">
+      <p><i class='bx bx-error-circle'></i> Usuário Inválido!</p>
+  </div>
+  <div id="cadastroMsg" class="mensagemLogin">
+      <p><i class='bx bx-checkbox-checked'></i> Logado com sucesso!</p>
+  </div>
     <img width="350px" src="./img/Source code.gif" alt="">
     <div class="box">
       <h2 class="titulo">Criar conta</h2>
@@ -213,7 +219,15 @@
       ),
       
   });
-  return response.json();
+  var usuario = await response.json()
+        if(usuario.length == 0){
+            erroMsg.style.display = 'block'
+          }else {
+          cadastroMsg.style.display = 'block'
+          setTimeout(function () {
+                        window.location = "./login.html";
+                    }, 1500);
+        }
   
   }
   function voltar() {

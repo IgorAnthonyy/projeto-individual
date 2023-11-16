@@ -3,8 +3,8 @@ const mysql = require("mysql2");
 var mySqlConfig = {
     host: "localhost",
     database: "codecraft",
-    user: "root",
-    password: "fUtur@13",
+    user: "aluno",
+    password: "sptech",
 };
 
                       

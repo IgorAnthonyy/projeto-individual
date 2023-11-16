@@ -14,15 +14,24 @@ class UsuarioRepository {
                AND senha = '${senha}';`);
     }
     async criarUsuario(usuario) {
-        const { email, senha, nome, telefone, cep, uf, cidade, bairro, rua, complemento} = usuario;
+        const { email, senha, nome, telefone} = usuario;
 
         return await executar(
-            `INSER INTO endereco (cep, uf, cidade, bairro, rua, complemento) VALUES
-             ('${cep}', '${uf}', '${cidade}', '${bairro}', '${rua}', '${complemento}');
-             
-             INSER INTO usuario (email, senha, nome, telefone, fkEndereco) VALUES
-            ('${email}', '${senha}', '${nome}', '${telefone}', '${rua}');   
             `
+             INSERT INTO usuario (email, senha, nome, telefone, fkEndereco) VALUES
+                ('${email}', '${senha}', '${nome}', '${telefone}','6');
+             `
+             
+            
+            );
+    }
+    async criarUsuarioEndereco(usuario) {
+        const { cep, uf, cidade, bairro, rua, complemento} = usuario;
+
+        return await executar(
+            `INSERT INTO endereco (cep, uf, cidade, bairro, rua, complemento) VALUES
+             ('${cep}', '${uf}', '${cidade}', '${bairro}', '${rua}', '${complemento}');
+             `         
             );
     }
 }

@@ -9,6 +9,14 @@ class UsuarioService {
     {
         return await this.usuarioRepository.ObterUsuario(usuario);
     }
+    async cadastro(usuario)
+    {
+        return await this.usuarioRepository.criarUsuario(usuario);
+    }
+    async cadastroEndereco(usuario)
+    {
+        return await this.usuarioRepository.criarUsuarioEndereco(usuario);
+    }
 }
 
 module.exports = UsuarioService;

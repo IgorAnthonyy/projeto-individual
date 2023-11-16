@@ -17,6 +17,7 @@ app.use(cors());
 
 app.use("/", mainRouter);
 app.use("/usuario", usuarioRouter)
+app.use("/cadastro", usuarioRouter)
 
 app.listen(3000, () => {
     console.log(`Estamos rodando na porta ${PORTA}`)

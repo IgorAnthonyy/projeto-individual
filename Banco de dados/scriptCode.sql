@@ -56,3 +56,8 @@ INSERT INTO usuario (email, senha, nome, telefone, fkEndereco) VALUES
 ('usuario5@example.com', 'senha5', 'Usuário 5', '55555555555', 5);
 
 select * from usuario;
+INSERT INTO endereco (idEndereco, cep, uf, cidade, bairro, rua, complemento) VALUES
+(6, '12345-678', 'Estado1', 'Cidade1', 'Bairro1', 'Rua1', 'Complemento1');
+
+INSERT INTO usuario (email, senha, nome, telefone, fkEndereco) VALUES
+('igor@gmail.com', 'senha1', 'Igor Anthony', '11111111111', 6);
