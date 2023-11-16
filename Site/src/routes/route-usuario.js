@@ -7,6 +7,12 @@ const usuarioController = new UsuarioController();
 
 router.post('/login', (req, res) => {
      usuarioController.login(req, res);
+
 });
+router.post('/cadastro', (req, res) => {
+    console.log(req.body);
+     usuarioController.cadastrar(req, res);
+});
+
 
 module.exports = router;

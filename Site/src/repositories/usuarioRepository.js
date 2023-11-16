@@ -13,6 +13,18 @@ class UsuarioRepository {
              WHERE email = '${email}'
                AND senha = '${senha}';`);
     }
+    async criarUsuario(usuario) {
+        const { email, senha, nome, telefone, cep, uf, cidade, bairro, rua, complemento} = usuario;
+
+        return await executar(
+            `INSER INTO endereco (cep, uf, cidade, bairro, rua, complemento) VALUES
+             ('${cep}', '${uf}', '${cidade}', '${bairro}', '${rua}', '${complemento}');
+             
+             INSER INTO usuario (email, senha, nome, telefone, fkEndereco) VALUES
+            ('${email}', '${senha}', '${nome}', '${telefone}', '${rua}');   
+            `
+            );
+    }
 }
 
 

@@ -15,6 +15,9 @@ class UsuarioController {
 
         res.status(200).json(usuarioAuth);
     }
+    async cadastrar(req, res){
+        
+    }
 }
 
 module.exports = UsuarioController;

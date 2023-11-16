@@ -7,6 +7,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="./css/header.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
     <link rel="stylesheet" href="./css/login.css">
     <link rel="stylesheet" href="./css/footer.css">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -29,20 +30,35 @@
                         <div id="sumir" class="sumirAparecer">
                             <a href="./programacaoHTML.html">HTML</a>
                             <a href="./programacaoCSS.html">CSS</a>
-
                         </div>
                     </div>
                     <li><a href="./quiz.html">QUIZ</a></li>
                     <li><a href="./sobre.html">SOBRE NÓS</a></li>
                 </ul>
             </nav>
-            <div class="cadastroElogin">
+            <div id="user">
+                
+                <button id="btnNome" onclick="perfil()"><span id="b_nome"></span><i class='bx bxs-chevron-down'></i></button>
+                <div id="colAparecer">
+                    <button><a href="">Minha Conta<i class='bx bxs-user-circle' ></i></a></button>
+                    <button onclick="sair()" id="btnSair">Sair<i class='bx bx-exit' ></i></button>
+                </div>
+                
+            </div>
+            <div id="cel" class="cadastroElogin">
                 <a class="cl cadastro" href="./cadastro.html">Cadastro</a>
                 <a class="cl login" href="./login.html">Login</a>
             </div>
+            
         </div>
     </header>
     <main>
+        <div id="erroMsg" class="mensagemLogin">
+            <p><i class='bx bx-error-circle'></i> Usuário Inválido!</p>
+        </div>
+        <div id="loginMsg" class="mensagemLogin">
+            <p><i class='bx bx-checkbox-checked'></i> Logado com sucesso!</p>
+        </div>
         <img width="350px" src="./img/Source code.gif" alt="">
         <div class="loginBox">
             <h2>Logar</h2>
@@ -105,9 +121,20 @@
                 email: email,
                 senha: senha
             })
-        });
+        })
 
-        console.log(await resultado.json());
+
+        var usuario = await resultado.json()
+        if(usuario.length == 0){
+            erroMsg.style.display = 'block'
+        }else {
+        sessionStorage.setItem('EMAIL_USUARIO', usuario[0].email)
+        sessionStorage.setItem('NOME_USUARIO', usuario[0].nome)
+        loginMsg.style.display = 'block'
+        setTimeout(function () {
+                        window.location = "./index.html";
+                    }, 1500);
+        }
     }
 </script>
 

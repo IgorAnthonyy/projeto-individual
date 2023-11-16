@@ -4,41 +4,122 @@ main{
     justify-content: center;
     background-color: #3f3f3f;
     align-items: center;
-    gap: 20px;
 }
-.cadastroBox{
-    text-align: center;
-    width: 550px;
-    padding: 40px;
-    border-radius: 10px;
-    color: #fff;
+.box .logo {
+    width: 50px;
 }
-.inputs input {
-    width: 530px;
-    font-size: 18px;
-    padding: 8px 3px;
-    margin-bottom: 10px;
-}
-.inputs input::placeholder {
-    padding-left: 2px;
-}
-.cadastroBox h2 {
-    font-size: 44px;
+
+.passosForm {
+    display: flex;
+    justify-content: center;
+    align-items: center;
     margin-bottom: 30px;
 }
-.inputs p {
-    text-align: left;
+
+.line {
+    height: 1px;
+    width: 100px;
+    background-color: black;
+    margin: 0 8px 0 8px;
 }
-.cadastroBox button{
-    margin-top: 10px;
-    box-shadow: 0px 3px 40px 10px #0097b27e;
+
+.circuloPassos {
+    background-color: #00d9ff;
+    border: 1px solid black;
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+}
+
+.circuloPassos p {
+    align-items: center;
+    justify-content: center;
+    display: flex;
+    height: 100%;
+    color: white;
+}
+
+#segundoPasso{
+    background-color: white;
+}
+
+#segundoPasso p{
+    color: black;
+}
+
+.titulo {
+    color: #ffffff;
+    font-size: 48px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: bold;
+    margin-bottom: 30px;
+}
+
+.box input {
+    background-color: #ececec;
+    border: 1px solid;
+    display: block;
+    width: 100%;
+    font-size: 18px;
+    padding: 8px 0 8px 8px;
+    margin-bottom: 20px;
+}
+
+.box input::placeholder {
+    font-size: 18px;
+    color: #afafaf;
+    
+}
+
+
+.box {
+    width: 450px;
+    border-radius: 10px;
+    text-align: center;
+    padding: 50px;
+    margin-bottom: 50px;
+}
+
+.box button {
     cursor: pointer;
+    width: 40%;
     padding: 10px;
+    font-size: 20px;
+    box-shadow: 0px 3px 40px 10px #0097b27e;
     background-color: #0097B2;
     border: none;
-    font-size: 20px;
+    border-radius: 40px;
     color: #fff;
     font-weight: bold;
-    width: 100%;
+    margin-top: 20px;
     transition: 0.5s;
+}
+
+.div-botao {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    justify-content: space-between;
+}
+
+
+.mensagemErro {
+    color: rgb(255, 255, 255);
+    margin-top: 16px;
+    line-height: 25px;
+    font-weight: lighter;
+    font-size: 16px;
+}
+
+
+
+#cadastrarse {
+    display: none;
+}
+
+.lado-direito p,
+.lado-esquerdo p {
+    text-align: left;
+    color: #ffffff;
+    font-size: 18px;
 }

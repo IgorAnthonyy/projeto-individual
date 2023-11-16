@@ -11,9 +11,10 @@
     <link rel="stylesheet" href="./css/footer.css">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Roboto+Condensed:wght@100;400;800&display=swap" rel="stylesheet">
+    <script src="./js/sessao.js"></script>
     <title>CodeCraft - HTML</title>
 </head>
-<body>
+<body onload="validarSessao()">
     <header class="cabecalho">
         <div class="container">
             <div class="logo">
@@ -33,10 +34,20 @@
                     <li><a href="./sobre.html">SOBRE NÓS</a></li>
                 </ul>
             </nav>
-            <div class="cadastroElogin">
+            <div id="user">
+                
+                <button id="btnNome" onclick="perfil()"><span id="b_nome"></span><i class='bx bxs-chevron-down'></i></button>
+                <div id="colAparecer">
+                    <button><a href="">Minha Conta<i class='bx bxs-user-circle' ></i></a></button>
+                    <button onclick="sair()" id="btnSair">Sair<i class='bx bx-exit' ></i></button>
+                </div>
+                
+            </div>
+            <div id="cel" class="cadastroElogin">
                 <a class="cl cadastro" href="./cadastro.html">Cadastro</a>
                 <a class="cl login" href="./login.html">Login</a>
             </div>
+            
         </div>
     </header>
     <main>

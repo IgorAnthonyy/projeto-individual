@@ -28,7 +28,7 @@ main {
     justify-content: center;
     gap: 20px;
 }
-.bx {
+.bx-bullseye, .bxs-low-vision, .bx-diamond{
     font-size: 100px;
     color: #fff;
     

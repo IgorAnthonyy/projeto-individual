@@ -1,17 +1,19 @@
 <!DOCTYPE html>
 <html lang="pt-br">
+
 <head>
-    <meta charset="UTF-8">
-    <link rel="icon" href="./img/CodeCraft-removebg-preview.png">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="./css/header.css">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="stylesheet" href="./css/footer.css">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link rel="stylesheet" href="./css/cadastro.css">
-    <link href="https://fonts.googleapis.com/css2?family=Roboto+Condensed:wght@100;400;800&display=swap" rel="stylesheet">
-    <title>CodeCraft - Cadastro</title>
+  <meta charset="UTF-8">
+  <link rel="icon" href="./img/CodeCraft-removebg-preview.png">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="./css/header.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="stylesheet" href="./css/footer.css">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="./css/cadastro.css">
+  <link href="https://fonts.googleapis.com/css2?family=Roboto+Condensed:wght@100;400;800&display=swap" rel="stylesheet">
+  <title>CodeCraft - Cadastro</title>
 </head>
+
 <body>
   <header class="cabecalho">
     <div class="container">
@@ -26,78 +28,117 @@
                     <div id="sumir" class="sumirAparecer">
                         <a href="./programacaoHTML.html">HTML</a>
                         <a href="./programacaoCSS.html">CSS</a>
-
                     </div>
                 </div>
                 <li><a href="./quiz.html">QUIZ</a></li>
                 <li><a href="./sobre.html">SOBRE NÓS</a></li>
             </ul>
         </nav>
-        <div class="cadastroElogin">
+        <div id="user">
+            
+            <button id="btnNome" onclick="perfil()"><span id="b_nome"></span><i class='bx bxs-chevron-down'></i></button>
+            <div id="colAparecer">
+                <button><a href="">Minha Conta<i class='bx bxs-user-circle' ></i></a></button>
+                <button onclick="sair()" id="btnSair">Sair<i class='bx bx-exit' ></i></button>
+            </div>
+            
+        </div>
+        <div id="cel" class="cadastroElogin">
             <a class="cl cadastro" href="./cadastro.html">Cadastro</a>
             <a class="cl login" href="./login.html">Login</a>
         </div>
+        
     </div>
 </header>
-    <main>
-      <img width="350px" src="./img/Source code.gif" alt="">
-        <div class="cadastroBox">
-            <h2>Cadastrar</h2>
-            <div class="inputs">
-                <p>E-mail:</p>
-                <input type="email" id="iptEmail" placeholder="email@email.email">
-                <div class="mensagemErro" id="erroEmail" style="display: none;">
-                    E-mail inválido <br>
-                  </div>
-                <p>Senha:</p>
-                <input type="password" id="iptSenha" placeholder="senha">
-                <div class="mensagemErro" id="erroSenha" style="display: none;">
-                    Insira uma senha com pelo menos 8 dígitos <br>
-                    A senha deve ter pelo menos 1 caractere especial <br>
-                    A senha deve ter pelo menos uma letra maiúscula <br>
-                    A senha deve ter pelo menos uma letra minúscula
-                  </div>
-                <p>Repetir-senha:</p>
-                <input type="password" id="iptRepetirSenha" placeholder="repita sua senha">
-                <div class="mensagemErro" id="erroRepetirSenha" style="display: none;">
-                  As senhas não coincidem <br>
-                  </div>
-                <p>Telefone:</p>
-                <input type="text" id="iptTelefone" placeholder="(dd)xxxxx-xxxx">
-            </div>
-            <button onclick="cadastrar()">Cadastrar</button>
+  <main>
+    <img width="350px" src="./img/Source code.gif" alt="">
+    <div class="box">
+      <h2 class="titulo">Criar conta</h2>
+      <div class="passosForm">
+        <div class="circuloPassos">
+          <p>1</p>
         </div>
-    </main>
-    <footer>
-        <div class="container">
-             <img src="./img/CodeCraft__2_-removebg-preview.png" alt="">
-             <div class="navegar">
-                 <p class="footerTitulo">Navegação</p>
-                 <ul>
-                  <li><a href="./index.html">HOME</a></li>
-                  <li><a href="./programacao.html">HTML & CSS</a></li>
-                  <li><a href="./quiz.html">QUIZ</a></li>
-                  <li><a href="./sobre.html">SOBRE NÓS</a></li>
-              </ul>
-             </div>
-             <div class="contato">
-                 <p class="footerTitulo">Contato</p>
-                 <i class='bx bxl-instagram'></i>
-                 <p class="footerTexto">codecraft@gmail.com</p>
-             </div>
+        <div class="line"></div>
+        <div class="circuloPassos" id="segundoPasso">
+          <p id="numeroDois">2</p>
         </div>
-     </footer>
-     <script src="./js/header.js"></script>
+      </div>
+      <div class="cadastro">
+        <div id="direito" class="lado-direito">
+          <p>E-mail:</p>
+          <input type="email" id="iptEmail" placeholder="Insira o e-mail" required />
+          <div class="mensagemErro" id="erroEmail" style="display: none;">
+            E-mail inválido <br>
+          </div>
+          <p>Senha:</p>
+          <input type="password" id="iptSenha" placeholder="Insira uma senha" required />
+          <div class="mensagemErro" id="erroSenha" style="display: none;">
+            Insira uma senha com pelo menos 8 dígitos <br>
+            A senha deve ter pelo menos 1 caractere especial <br>
+            A senha deve ter pelo menos uma letra maiúscula <br>
+            A senha deve ter pelo menos uma letra minúscula
+          </div>
+          <p>Nome:</p>
+          <input type="text" id="iptNome" placeholder="Insira seu nome" required />
+          <p>Telefone:</p>
+          <input type="text" id="iptTelefone" placeholder="Insira seu telefone" required />
+        </div>
+        <div id="esquerdoDIV" class="lado-esquerdo" style="display: none;">
+          <p>CEP:</p>
+          <input type="text" id="iptCep" placeholder="Insira o CEP" required />
+          <div class="mensagemErro" id="erroCEP" style="display: none;">
+            CEP inválido
+          </div>
+          <p>UF:</p>
+          <input type="text" id="iptUF" placeholder="Insira o UF" required />
+          <p>Cidade:</p>
+          <input type="text" id="iptCidade" placeholder="Insira a cidade" required />
+          <p>Bairro:</p>
+          <input type="text" id="iptBairro" placeholder="Insira o bairro" required />
+          <p>Rua:</p>
+          <input type="text" id="iptRua" placeholder="Insira a rua" required />
+          <p>Complemento:</p>
+          <input type="text" id="iptComplemento" placeholder="Insira o complemento" />
+        </div>
+        <div class="div-botao" id="divBotao">
+          <button id="botaoVoltar" style="display: none;" onclick="voltar()">Voltar</button>
+          <button id="passoUm" onclick="passo1()">Avançar</button>
+          <button id="cadastrarse" onclick="cadastrar()">Cadastrar</button>
+        </div>
+      </div>
+  </main>
+  <footer>
+    <div class="container">
+      <img src="./img/CodeCraft__2_-removebg-preview.png" alt="">
+      <div class="navegar">
+        <p class="footerTitulo">Navegação</p>
+        <ul>
+          <li><a href="./index.html">HOME</a></li>
+          <li><a href="./programacao.html">HTML & CSS</a></li>
+          <li><a href="./quiz.html">QUIZ</a></li>
+          <li><a href="./sobre.html">SOBRE NÓS</a></li>
+        </ul>
+      </div>
+      <div class="contato">
+        <p class="footerTitulo">Contato</p>
+        <i class='bx bxl-instagram'></i>
+        <p class="footerTexto">codecraft@gmail.com</p>
+      </div>
+    </div>
+  </footer>
+  <script src="./js/header.js"></script>
 </body>
+
 </html>
 <script>
-    function cadastrar(){
-        var email = iptEmail.value
-        var senha = iptSenha.value
-        var repetirSenha = iptRepetirSenha.value
-        var telefone = iptTelefone.value
+  function passo1() {
+    var email = iptEmail.value
+    var senha = iptSenha.value
+    var nome = iptNome.value
+    var telefone = iptTelefone.value
 
-        var possui_especial =
+
+    var possui_especial =
       senha.indexOf('#') >= 0 ||
       senha.indexOf('@') >= 0 ||
       senha.indexOf('!') >= 0 ||
@@ -107,28 +148,83 @@
       senha.indexOf('+') >= 0 ||
       senha.indexOf('_') >= 0;
 
-      if (email.indexOf('@') >= 0 && (email.endsWith('.com') || email.endsWith('.br') || email.endsWith('.school'))) {
-      erroEmail.style.display = 'none'
-      iptEmail.style.borderColor = 'transparent';
-    }
-    else {
-      erroEmail.style.display = 'block';
-      iptEmail.style.borderColor = 'red';
-    }
-    if (senha.length >= 8 && possui_especial && (senha != senha.toUpperCase() && senha != senha.toLowerCase())) {
-      erroSenha.style.display = 'none'
-      iptSenha.style.borderColor = 'transparent';
-    }
-    else {
-      erroSenha.style.display = 'block'
-      iptSenha.style.borderColor = 'red'
-    }
-    if(repetirSenha == senha){
-        erroRepetirSenha.style.display = 'none'
-      iptRepetirSenha.style.borderColor = 'transparent';
-    }else {
-        erroRepetirSenha.style.display = 'block'
-      iptRepetirSenha.style.borderColor = 'red'
-    }
-    }
+
+    // if (email.indexOf('@') >= 0 && (email.endsWith('.com') || email.endsWith('.br') || email.endsWith('.school'))) {
+    //   erroEmail.style.display = 'none'
+
+    // }
+    // else {
+    //   erroEmail.style.display = 'block';
+    //   iptEmail.style.borderColor = 'red';
+    // }
+
+    // if (senha.length >= 8 && possui_especial && (senha != senha.toUpperCase() && senha != senha.toLowerCase())) {
+    //   erroSenha.style.display = 'none'
+    // }
+    // else {
+    //   erroSenha.style.display = 'block'
+    //   iptSenha.style.borderColor = 'red'
+    // }
+    // if (email.indexOf('@') >= 0 && (email.endsWith('.com') || email.endsWith('.br') || email.endsWith('.school')) && senha.length >= 8 && possui_especial && (senha != senha.toUpperCase() && senha != senha.toLowerCase())) {
+      esquerdoDIV.style.display = "block";
+      direito.style.display = "none";
+      passoUm.style.display = "none";
+      cadastrarse.style.display = "block";
+      botaoVoltar.style.display = "block";
+      divBotao.style.flexDirection = "row";
+      segundoPasso.style.backgroundColor = "#00d9ff";
+      numeroDois.style.color = "white";
+    // }
+  }
+  async function cadastrar() {
+    var email = iptEmail.value
+    var senha = iptSenha.value
+    var nome = iptNome.value
+    var telefone = iptTelefone.value
+    var cep = iptCep.value
+    var uf = iptUF.value
+    var cidade = iptCidade.value
+    var bairro = iptBairro.value
+    var rua = iptRua.value
+    var complemento = iptComplemento.value
+
+    // if (cep.length == 8) { erroCEP.style.display = 'none' }
+    // else {
+    //   erroCEP.style.display = 'block'
+    //   iptCep.style.borderColor = 'red'
+    // }
+    const response = await fetch("/usuario/cadastro", {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify({
+        email: email,
+        senha: senha,
+        nome: nome,
+        telefone: telefone,
+        cep: cep,
+        uf: uf,
+        cidade: cidade,
+        bairro: bairro,
+        rua: rua,
+        complemento: complemento
+      }
+      ),
+      
+  });
+  return response.json();
+  
+  }
+  function voltar() {
+    direito.style.display = "block";
+    esquerdoDIV.style.display = "none";
+    passoUm.style.display = "block";
+    cadastrarse.style.display = "none";
+    botaoVoltar.style.display = "none";
+    divBotao.style.flexDirection = "column";
+    segundoPasso.style.backgroundColor = "white";
+    numeroDois.style.color = "black";
+  }
+
 </script>

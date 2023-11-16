@@ -1,19 +1,23 @@
 <!DOCTYPE html>
 <html lang="pt-br">
+
 <head>
     <meta charset="UTF-8">
     <link rel="icon" href="./img/CodeCraft-removebg-preview.png">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./css/header.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Roboto+Condensed:wght@100;400;800&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="./css/header.css">
+    <link rel="stylesheet" href="./css/conta.css">
     <link rel="stylesheet" href="./css/footer.css">
-    <link rel="stylesheet" href="./css/index.css">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Condensed:wght@100;400;800&display=swap"
+        rel="stylesheet">
     <script src="./js/sessao.js"></script>
-    <title>CodeCraft - Tela Inicial</title>
+
+    <title>CodeCraft - conta</title>
 </head>
+
 <body onload="validarSessao()">
     <header class="cabecalho">
         <div class="container">
@@ -51,35 +55,59 @@
         </div>
     </header>
     <main>
-        <div class="banner">
-        </div>
-        <h1 class="titulo">O QUE É FRONT-END</h1>
-        <div class="containerTextos">
-            <p class="texto">Front-end, em desenvolvimento de software e design web, refere-se à parte de um aplicativo ou site que os usuários veem e interagem diretamente. É a interface com a qual os usuários interagem, e inclui todos os elementos visuais, como layouts, botões, menus, formulários, imagens e texto. O objetivo do desenvolvimento front-end é criar uma experiência do usuário atraente e funcional, tornando o aplicativo ou site fácil de usar.</p>
-            <img width="500px" src="./img/Coding workshop-bro.svg" alt="">
-        </div>   
-        <h1 class="titulo">TOP 3 PRINCIPAIS LINGUAGENS PARA FRONT-END</h1>
-        <div class="containerLinguagens">
-            <div class="cardLinguagens">
-                <p class="texto">1º Linguagens de Marcação: HTML (Hypertext Markup Language) é a linguagem de marcação fundamental para a criação de estrutura e conteúdo de páginas da web. HTML é usado para definir a estrutura de uma página, como cabeçalhos, parágrafos, links e imagens.</p>
-                <i class='bx bxl-html5'></i>
+        <div class="menu-lateral">
+            <div class="foto">
+                <img src="./img/" alt="">
             </div>
-            <div class="cardLinguagens">
-                <p class="texto">2º Linguagens de Programação: JavaScript é a linguagem de programação principal para tornar as páginas da web interativas. Ela é usada para criar funcionalidades dinâmicas, como validação de formulários, animações, manipulação de elementos da página e comunicação com servidores.</p>
-                <i class='bx bxl-javascript'></i>
-            </div>
-            <div class="cardLinguagens">
-                <p class="texto">3º CSS, ou Cascading Style Sheets, é uma linguagem de folha de estilo utilizada para controlar a apresentação e o layout de documentos HTML (Hypertext Markup Language). O CSS é uma parte fundamental da programação web e é essencial para o design e a formatação de páginas da web.</p>
-                <i class='bx bxl-css3'></i>
+            <div class="navegacao">
+                <button onclick="dado()">Dados da conta</button>
+                <button onclick="anali()">Analytics</button>
             </div>
         </div>
-        <h1 class="titulo">QUAL A IMPORTÂNCIA DO FRONT-END</h1>
-        <div class="containerImportancia">
-            <p class="texto">O front-end é a primeira coisa que os usuários veem quando acessam um aplicativo ou site. Uma interface bem projetada e atraente cria uma primeira impressão positiva e pode incentivar os usuários a permanecer e explorar mais.</p>
-        </div>     
+        <div id="dados">
+            <div class="fotoDados">
+                <img src="" alt="">
+            </div>
+            <div class="nomeUsuario">
+                
+            </div>
+            <div class="conteudoUsuario">
+                <div class="infoUsuario">
+                    <h3>Nome:</h3><p id="usuario_nome"></p>
+                </div>
+                <hr>
+
+                <div class="infoUsuario">
+                    <h3>Email:</h3><p id="b_email"></p>
+                </div>
+                <hr>
+                <div class="infoUsuario">
+                    <h3>Telefone:</h3><p>11944878213</p>
+                </div>
+                <hr>
+                <div class="infoUsuario">
+                    <h3>Cidade:</h3><p>cidade exemplo</p>
+                </div>
+                <hr>
+
+                <div class="infoUsuario">
+                    <h3>Bairro:</h3><p>bairro exemplo</p>
+                </div>
+                <hr>
+
+                <div class="infoUsuario">
+                    <h3>Rua:</h3><p>Rua exemplo</p>
+                </div>
+                <hr>
+
+            </div>
+        </div>
+        <div id="analytics">
+            
     </main>
+    
     <footer>
-       <div class="container">
+        <div class="container">
             <img src="./img/CodeCraft__2_-removebg-preview.png" alt="">
             <div class="navegar">
                 <p class="footerTitulo">Navegação</p>
@@ -95,11 +123,19 @@
                 <i class='bx bxl-instagram'></i>
                 <p class="footerTexto">codecraft@gmail.com</p>
             </div>
-       </div>
+        </div>
     </footer>
     <script src="./js/header.js"></script>
 </body>
+
 </html>
 <script>
-    
+    function dado() {
+        dados.style.display = 'block'
+        analytics.style.display = 'none'
+    }
+    function anali() {
+        dados.style.display = 'none'
+        analytics.style.display = 'block'
+    }
 </script>

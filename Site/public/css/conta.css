@@ -1,0 +1,81 @@
+main {
+    display: flex;
+}
+.menu-lateral {
+    padding: 20px;
+    height: 500px;
+    width: 190px;
+    background-color: #0097B2;
+}
+.menu-lateral .navegacao button {
+    display: block;
+    cursor: pointer;
+    margin-bottom: 10px;
+    font-size: 20px;
+    padding: 10px 5px;
+    transition: 0.2s;
+}
+.menu-lateral .navegacao button:hover{
+    background-color: #005261;
+}
+.navegacao {
+    margin: 0 auto;
+    width: 100%;
+}
+.foto {
+    height: 80px;
+    border-radius: 50%;
+    margin: 0 auto;
+    margin-bottom: 50px;
+    border: 2px solid white;
+    width: 80px;
+}
+
+#dados {
+    overflow-x: hidden;
+    overflow-y: scroll;
+    background-color: #3f3f3f;
+    height: 500px;
+    padding: 20px;
+    width: 100%;
+}
+.fotoDados {
+    height: 120px;
+    width: 120px;
+    border-radius: 50%;
+    margin: 0 auto;
+    margin-bottom: 10px;
+    border: 2px solid white;
+}
+.nomeUsuario {
+    text-align: center;
+}
+.infoUsuario {
+    display: flex;
+    align-items: center;
+    margin: 15px auto;
+    color: #fff;
+}
+.infoUsuario h3 {
+    width: 2px;
+    
+}
+.infoUsuario p {
+    background-color: #525252;
+    padding: 10px;
+    width: 100%;
+    font-size: 20px;
+
+    margin-left: 200px;
+}
+hr {
+    margin: 0 auto;
+}
+#analytics {
+    overflow-x: hidden;
+    overflow-y: scroll;
+    background-color: #3f3f3f;
+    height: 500px;
+    padding: 20px;
+    width: 100%;
+}
