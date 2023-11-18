@@ -15,7 +15,7 @@ class UsuarioController {
 
         res.status(200).json(usuarioAuth);
     }
-    async cadastro(req, res){
+    async cadastrar(req, res) {
         var usuario = {
             email: req.body.email,
             senha: req.body.senha,
@@ -29,10 +29,21 @@ class UsuarioController {
             complemento: req.body.complemento
         }
 
-        var usuarioAuth = await this.usuarioService.cadastro(usuario);
+        var usuarioAuth = await this.usuarioService.cadastrar(usuario);
 
-        res.status(200).json(usuarioAuth)
+        const { notification } = usuarioAuth;
+
+        if (notification.length != 0) {
+            res.status(400).json({ notification });
+            return;
+        }
+
+        res.status(201).json(usuarioAuth)
     }
 }
 
 module.exports = UsuarioController;
+
+// o que é uma class - Uma classe é uma forma (molde)
+
+//login > app.js > route > controller > service > repository > (repository chama o bd)
