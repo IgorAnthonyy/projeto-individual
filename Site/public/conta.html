@@ -40,25 +40,26 @@
                 </ul>
             </nav>
             <div id="user">
-                
-                <button id="btnNome" onclick="perfil()"><span id="b_nome"></span><i class='bx bxs-chevron-down'></i></button>
+
+                <button id="btnNome" onclick="perfil()"><span id="b_nome"></span><i
+                        class='bx bxs-chevron-down'></i></button>
                 <div id="colAparecer">
-                    <button><a href="./conta.html">Minha Conta<i class='bx bxs-user-circle' ></i></a></button>
-                    <button onclick="sair()" id="btnSair">Sair<i class='bx bx-exit' ></i></button>
+                    <button><a href="./conta.html">Minha Conta<i class='bx bxs-user-circle'></i></a></button>
+                    <button onclick="sair()" id="btnSair">Sair<i class='bx bx-exit'></i></button>
                 </div>
-                
+
             </div>
             <div id="cel" class="cadastroElogin">
                 <a class="cl cadastro" href="./cadastro.html">Cadastro</a>
                 <a class="cl login" href="./login.html">Login</a>
             </div>
-            
+
         </div>
     </header>
     <main>
         <div class="menu-lateral">
             <div class="foto">
-                <img src="./img/" alt="">
+                <img src="https://cdn-icons-png.flaticon.com/512/1547/1547183.png" alt="">
             </div>
             <div class="navegacao">
                 <button onclick="dado()">Dados da conta</button>
@@ -66,144 +67,231 @@
             </div>
         </div>
         <div id="dados">
-            <div class="fotoDados">
-                <img src="" alt="">
-            </div>
+            <h2>Meus Dados</h2>
+            <!-- <input type="file" id="myFileInput">
             <div class="nomeUsuario">
-                
-            </div>
+                <img src="" id="imagemUser" style="width: 200px;" alt="">
+            </div> -->
             <div class="conteudoUsuario">
                 <div class="infoUsuario">
-                    <h3>Nome:</h3><p id="usuario_nome"></p>
+                    <h3>Nome:</h3>
+                    <p id="usuario_nome"></p>
                 </div>
                 <hr>
 
                 <div class="infoUsuario">
-                    <h3>Email:</h3><p id="b_email"></p>
+                    <h3>Email:</h3>
+                    <p id="b_email"></p>
                 </div>
                 <hr>
                 <div class="infoUsuario">
-                    <h3>Telefone:</h3><p id="b_telefone"></p>
+                    <h3>Telefone:</h3>
+                    <p id="b_telefone"></p>
                 </div>
                 <hr>
-                <div class="infoUsuario">
-                    <h3>Cidade:</h3><p id="b_cidade"></p>
-                </div>
-                <hr>
-
-                <div class="infoUsuario">
-                    <h3>Bairro:</h3><p id="b_bairro"></p>
-                </div>
-                <hr>
-
-                <div class="infoUsuario">
-                    <h3>Rua:</h3><p id="b_rua"></p>
-                </div>
-                <hr>
-
             </div>
         </div>
         <div id="analytics">
             <div class="kpis">
                 <div class="box">
                     <h3>Quantidade de Quiz realizado</h3>
-                    <h5>5</h5>
+                    <h5 id="tTotal"></h5>
                 </div>
                 <div class="box">
                     <h3>Quantidade de Quiz de Html realizado</h3>
-                    <h5>5</h5>
+                    <h5 id="tHtml"></h5>
                 </div>
                 <div class="box">
                     <h3>Quantidade de Quiz de Css realizado</h3>
-                    <h5>5</h5>
+                    <h5 id="tCss"></h5>
                 </div>
             </div>
             <div class="graficosGeral">
                 <div class="graficos">
                     <h3>Quiz HTML</h3>
                     <canvas id="myChart"></canvas>
-                  </div>
-                  <div class="graficos">
+                </div>
+                <div class="graficos">
                     <h3>Quiz CSS</h3>
                     <canvas id="myChart2"></canvas>
-                  </div>
+                </div>
             </div>
-               
-            </div>
+
+        </div>
     </main>
-    
+
     <footer>
         <div class="container">
-            <img src="./img/CodeCraft__2_-removebg-preview.png" alt="">
-            <div class="navegar">
-                <p class="footerTitulo">Navegação</p>
-                <ul>
-                    <li><a href="./index.html">HOME</a></li>
-                    <li><a href="#">HTML & CSS</a></li>
-                    <li><a href="#">QUIZ</a></li>
-                    <li><a href="#">SOBRE NÓS</a></li>
-                </ul>
-            </div>
-            <div class="contato">
-                <p class="footerTitulo">Contato</p>
-                <i class='bx bxl-instagram'></i>
-                <p class="footerTexto">codecraft@gmail.com</p>
-            </div>
+             <img src="./img/CodeCraft__2_-removebg-preview.png" alt="">
+             <div class="navegar">
+                 <p class="footerTitulo">Navegação</p>
+                 <ul>
+                     <li><a href="./index.html">HOME</a></li>
+                     <li><a href="#">HTML & CSS</a></li>
+                     <li><a href="#">QUIZ</a></li>
+                     <li><a href="#">SOBRE NÓS</a></li>
+                 </ul>
+             </div>
+             <div class="contato">
+                 <p class="footerTitulo">Contato</p>
+                 <i class='bx bxl-instagram'></i>
+                 <p class="footerTexto">codecraft@gmail.com</p>
+             </div>
+             <div class="criador">
+                 <p class="footerTitulo">Criador</p>
+                 <p class="footerTexto marginB">Igor Anthony De Jesus Maciel</p>
+                 <p class="footerTexto">Aluno da Sptech School</p>
+             </div>
         </div>
-    </footer>
+     </footer>
     <script src="./js/header.js"></script>
 </body>
 
 </html>
 <script>
+    const dataDashboardHtml = {
+        labels: [],
+        datasets: [{
+            label: 'Acertos',
+            backgroundColor: '#00d9ff',
+            data: [],
+            borderWidth: 1,
+        },
+        {
+            label: 'Erros',
+            backgroundColor: 'rgb(255, 83, 83)',
+            data: [],
+            borderWidth: 1,
+        }]
+    }
+
+    const dataDashboardCss = {
+        labels: [],
+        datasets: [{
+            label: 'Acertos',
+            backgroundColor: '#00d9ff',
+            data: [],
+            borderWidth: 1,
+        },
+        {
+            label: 'Erros',
+            backgroundColor: 'rgb(255, 83, 83)',
+            data: [],
+            borderWidth: 1,
+        }]
+    }
+
+    const options = {
+         
+        scales: {
+            x: {
+                grid: {
+                    color: 'white' // Mudar a cor da grade no eixo x
+                },
+                ticks: {
+                    color: 'white' // Cor das labels no eixo x
+                }
+            },
+            y: {
+                grid: {
+                    color: 'white' // Mudar a cor da grade no eixo y
+                },
+                ticks: {
+                    color: 'white' // Cor das labels no eixo x
+                }
+            }
+        },
+        plugins: {
+            legend: {
+                display: true,
+                labels: {
+                    color: 'white'
+                }
+            }
+        }
+    }
+
     const ctx = document.getElementById('myChart');
-    new Chart(ctx, {
-      type: 'bar',
-      data: {
-          labels: ['Tentativa 1', 'Tentativa 2', 'Tentativa 3'],
-          datasets: [{
-              label: 'Acertos',
-              backgroundColor: '#00d9ff',
-              data: [7, 4, 9],
-              borderWidth: 1,
-            },
-            {
-                label: 'Erros',
-                backgroundColor: 'rgb(255, 83, 83)',
-                data: [2, 5, 0],
-                borderWidth: 1,
-            }
-
-    ]
-}, 
+    var htmlChart = new Chart(ctx, {
+        type: 'bar',
+        data: dataDashboardHtml,
+        options
     });
+
     const ctx2 = document.getElementById('myChart2');
-    new Chart(ctx2, {
-      type: 'bar',
-      data: {
-          labels: ['Tentativa 1', 'Tentativa 2', 'Tentativa 3'],
-          datasets: [{
-              label: 'Acertos',
-              backgroundColor: '#00d9ff',
-              data: [7, 4, 9],
-              borderWidth: 1,
-            },
-            {
-                label: 'Erros',
-                backgroundColor: 'rgb(255, 83, 83)',
-                data: [2, 5, 0],
-                borderWidth: 1,
-            }
-
-    ]
-}, 
+    var cssChart = new Chart(ctx2, {
+        type: 'bar',
+        data: dataDashboardCss,
+        options
     });
+
     function dado() {
         dados.style.display = 'block'
         analytics.style.display = 'none'
     }
-    function anali() {
+
+    async function anali() {
         dados.style.display = 'none'
         analytics.style.display = 'block'
+        var idUsuario = sessionStorage.ID_USUARIO
+
+        var resultado = await fetch("/usuarios/analytics", {
+            method: "POST",
+            headers: {
+                "Content-Type": "application/json",
+            },
+            body: JSON.stringify({
+                idUsuarioServer: idUsuario,
+            }),
+        });
+
+        const resposta = await resultado.json();
+
+        tHtml.innerHTML = resposta.tentativaQuizHtml
+        tCss.innerHTML = resposta.tentativaQuizCss
+        tTotal.innerHTML = resposta.totalQuizRealizado
+
+
+        var resultadoDashboard = await fetch("/usuarios/analytics/dashboard", {
+            method: "POST",
+            headers: {
+                "Content-Type": "application/json",
+            },
+            body: JSON.stringify({
+                idUsuarioServer: idUsuario,
+            }),
+        });
+
+        var response = await resultadoDashboard.json();
+
+        onUpdateChartHtml(response);
+        onUpdateChartCSS(response);
     }
+
+    const onUpdateChartHtml = ({ dadosQuizHtml }) => {
+        var labels = dadosQuizHtml.map((args, index) => `Tentativa - ${index + 1}`)
+
+        var acertosHtml = dadosQuizHtml.map(args => args.qtdAcertosHtml);
+        var errosHtml = dadosQuizHtml.map(args => args.qtdErrosHtml);
+
+        dataDashboardHtml.labels = labels;
+        dataDashboardHtml.datasets[0].data = acertosHtml;
+        dataDashboardHtml.datasets[1].data = errosHtml;
+
+        htmlChart.update();
+    };
+
+    const onUpdateChartCSS = ({ dadosQuizCss }) => {
+        var labels = dadosQuizCss.map((args, index) => `Tentativa - ${index + 1}`)
+
+        var acertosCss = dadosQuizCss.map(args => args.qtdAcertosCss);
+        var errosCss = dadosQuizCss.map(args => args.qtdErrosCss);
+
+        dataDashboardCss.labels = labels;
+        dataDashboardCss.datasets[0].data = acertosCss;
+        dataDashboardCss.datasets[1].data = errosCss;
+
+        cssChart.update();
+    };
+
 </script>

@@ -27,7 +27,7 @@ main {
 .buttonEnviar {
     padding: 20px;
     font-size: 25px;
-    background-color: #00d9ff;
+    background-color: #00adcc;
     border: none;
     cursor: pointer;
     color: #fff;
@@ -36,7 +36,7 @@ main {
 }
 
 .buttonEnviar:hover {
-    background-color: #000000;
+    background-color: #004753;
     color: #ffffff;
 }
 #resultado {
@@ -46,7 +46,7 @@ main {
     width: 500px;
     margin: 0 auto;
     font-weight: bold;
-    color: #0097B2;
+    color: #00d9ff;
 }
 .enviar {
     box-shadow: none;

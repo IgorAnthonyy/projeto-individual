@@ -14,9 +14,11 @@
     <link href="https://fonts.googleapis.com/css2?family=Roboto+Condensed:wght@100;400;800&display=swap"
         rel="stylesheet">
     <title>CodeCraft - login</title>
+    
 </head>
 
 <body>
+    <script src="./js/sessao.js"></script>
     <header class="cabecalho">
         <div class="container">
             <div class="logo">
@@ -53,11 +55,10 @@
         </div>
     </header>
     <main>
-        <div id="erroMsg" class="mensagemLogin">
-            <p><i class='bx bx-error-circle'></i> Usuário Inválido!</p>
-        </div>
-        <div id="loginMsg" class="mensagemLogin">
-            <p><i class='bx bx-checkbox-checked'></i> Logado com sucesso!</p>
+        <div class="alerta_erro" >
+            <div class="card_erro" id="cardErro">
+              <span id="mensagem_erro" style="display: none;"></span>
+            </div>
         </div>
         <img width="350px" src="./img/Source code.gif" alt="">
         <div class="loginBox">
@@ -71,72 +72,98 @@
                 <p>Senha:</p>
                 <input id="iptSenha" type="password" placeholder="insira sua senha">
             </div>
-            <button onclick="logar()">Entrar</button>
+            <button onclick="entrar()">Entrar</button>
         </div>
     </main>
     <footer>
         <div class="container">
-            <img src="./img/CodeCraft__2_-removebg-preview.png" alt="">
-            <div class="navegar">
-                <p class="footerTitulo">Navegação</p>
-                <ul>
-                    <li><a href="./index.html">HOME</a></li>
-                    <li><a href="#">HTML & CSS</a></li>
-                    <li><a href="#">QUIZ</a></li>
-                    <li><a href="#">SOBRE NÓS</a></li>
-                </ul>
-            </div>
-            <div class="contato">
-                <p class="footerTitulo">Contato</p>
-                <i class='bx bxl-instagram'></i>
-                <p class="footerTexto">codecraft@gmail.com</p>
-            </div>
+             <img src="./img/CodeCraft__2_-removebg-preview.png" alt="">
+             <div class="navegar">
+                 <p class="footerTitulo">Navegação</p>
+                 <ul>
+                     <li><a href="./index.html">HOME</a></li>
+                     <li><a href="#">HTML & CSS</a></li>
+                     <li><a href="#">QUIZ</a></li>
+                     <li><a href="#">SOBRE NÓS</a></li>
+                 </ul>
+             </div>
+             <div class="contato">
+                 <p class="footerTitulo">Contato</p>
+                 <i class='bx bxl-instagram'></i>
+                 <p class="footerTexto">codecraft@gmail.com</p>
+             </div>
+             <div class="criador">
+                 <p class="footerTitulo">Criador</p>
+                 <p class="footerTexto marginB">Igor Anthony De Jesus Maciel</p>
+                 <p class="footerTexto">Aluno da Sptech School</p>
+             </div>
         </div>
-    </footer>
-    <script src="./js/header.js"></script>
+     </footer>
 </body>
 
 </html>
 <script>
-    async function logar() {
-        var email = iptEmail.value;
-        var senha = iptSenha.value;
+    function entrar() {
 
-        if (email.indexOf('@') >= 0 && (email.endsWith('.com') || email.endsWith('.br') || email.endsWith('.school'))) {
-            erroEmail.style.display = 'none'
-            iptEmail.style.borderColor = 'transparent';
+        var emailVar = iptEmail.value;
+        var senhaVar = iptSenha.value;
+
+        if (emailVar == "" || senhaVar == "") {
+            mensagem_erro.style.display = "block"
+            mensagem_erro.innerHTML = "Atenção! Preencha os campos em brancos";
+            return false;
         }
         else {
-            erroEmail.style.display = 'block';
-            iptEmail.style.borderColor = 'red';
+            setInterval(sumirMensagem, 5000)
         }
-
-
-        var resultado = await fetch("/usuario/login", {
+        fetch("/usuarios/autenticar",  {
             method: "POST",
             headers: {
                 "Content-Type": "application/json"
             },
             body: JSON.stringify({
-                email: email,
-                senha: senha
+                emailServer: emailVar,
+                senhaServer: senhaVar
             })
+        }).then(function (resposta) {
+            console.log("ESTOU NO THEN DO entrar()!")
+
+            if (resposta.ok) {
+                console.log(resposta);
+
+                resposta.json().then(json => {
+                    console.log(json);
+                    console.log(JSON.stringify(json));
+                    sessionStorage.EMAIL_USUARIO = json[0].email;
+                    sessionStorage.NOME_USUARIO = json[0].nome;
+                    sessionStorage.ID_USUARIO = json[0].idUsuario;
+                    sessionStorage.TELEFONE_USUARIO = json[0].telefone;
+                    mensagem_erro.style.display = "flex"
+                    mensagem_erro.innerHTML = "<i class='bx bx-checkbox-checked'></i>Logado com sucesso!";
+                        setTimeout(() => {
+                            window.location = "./conta.html";
+          }, "2000");
+                });
+
+            } else {
+
+                console.log("Houve um erro ao tentar realizar o login!");
+
+                resposta.text().then(texto => {
+                    console.error(texto);
+                });
+            }
+
+        }).catch(function (erro) {
+            console.log(erro);
         })
-
-
-        var usuario = await resultado.json()
-        if(usuario.length == 0){
-            erroMsg.style.display = 'block'
-        }else {
-        sessionStorage.setItem('EMAIL_USUARIO', usuario[0].email)
-        sessionStorage.setItem('NOME_USUARIO', usuario[0].nome)
-        sessionStorage.setItem('ID_USUARIO', usuario[0].idUsuario)
-        loginMsg.style.display = 'block'
-        setTimeout(function () {
-                        window.location = "./index.html";
-                    }, 1500);
-        }
+        return false;
     }
+
+    function sumirMensagem() {
+        cardErro.style.display = "none"
+    }
+
 </script>
 
 <!-- Routes -> Controller -> Service -> Repository  -> Database--> 

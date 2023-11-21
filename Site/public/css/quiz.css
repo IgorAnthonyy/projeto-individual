@@ -23,6 +23,12 @@ main {
     font-size: 120px;
     transition: 0.5s;
 }
-.containerEscolhas .bx:hover {
+.box {
+    background-color: #4d4d4d;
+    padding: 50px;
+    border-radius: 10px;
+}
+.bx:hover {
+
     font-size: 150px;
 }

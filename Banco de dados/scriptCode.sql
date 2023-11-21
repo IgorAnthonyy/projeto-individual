@@ -3,22 +3,10 @@ create database codecraft;
 
 use codecraft;
 
-create table endereco (
-idEndereco int primary key auto_increment,
-cep char(9),
-uf varchar(20),
-cidade varchar(45),
-bairro varchar(45),
-rua varchar(45),
-complemento varchar(45),
-fkUsuario int,
-constraint fkUsuarioforeign foreign key (fkUsuario)
-	references usuario(idUsuario)
-);
 
 create table usuario (
 idUsuario int primary key auto_increment,
-email varchar(100),
+email varchar(100) UNIQUE,
 senha char(20),
 nome varchar(45),
 telefone char(11)
@@ -41,4 +29,11 @@ constraint fkUcss foreign key (fkUsuario)
 	references usuario(idUsuario)
 );
 
-select * from usuario;
+INSERT INTO quizHtml (qtdDeAcertos, qtdDeErros) VALUES (2, 5);
+
+select * from usuario;	
+
+
+select * from quizcss;
+
+select count(idTentativa) from quizHtml; 
