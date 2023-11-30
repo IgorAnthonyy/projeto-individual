@@ -2,6 +2,7 @@ function validarSessao() {
     var email = sessionStorage.EMAIL_USUARIO;
     var nome = sessionStorage.NOME_USUARIO;
     var telefone = sessionStorage.TELEFONE_USUARIO;
+    var cep = sessionStorage.CEP_USUARIO;
    
     var bNome = document.getElementById("b_nome");
     var bEmail = document.getElementById("b_email")
@@ -17,6 +18,9 @@ function validarSessao() {
         bTelefone.innerHTML = telefone
 
     } 
+    if(cep != null){
+        bxEn.style.display = 'none'
+    }
 }
 function sair(){
 

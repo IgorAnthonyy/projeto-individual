@@ -53,7 +53,7 @@ function cadastrar(req, res) {
         res.status(400).send("Sua senha está undefined!");
     } else if (telefone == undefined) {
         res.status(400).send("Sua telefoneestá undefined!");
-    }else {
+    } else {
 
         // Passe os valores como parâmetro e vá para o arquivo usuarioModel.js
         usuarioModel.cadastrar(email, senha, nome, telefone)
@@ -74,7 +74,38 @@ function cadastrar(req, res) {
     }
 }
 
+
+async function cadastrarEndereco(req, res) {
+    // Crie uma variável que vá recuperar os valores do arquivo cadastro.html
+    var cep = req.body.cepServer;
+    var cidade = req.body.cidadeServer;
+    var bairro = req.body.bairroServer;
+    var rua = req.body.ruaServer;
+    var nmrCasa = req.body.nmrCasaServer;
+    var idUsuario = req.body.idUsuarioServer;
+
+    // Faça as validações dos valores
+    if (cep == undefined) {
+        res.status(400).send("Seu nome está undefined!");
+    } else if (cidade == undefined) {
+        res.status(400).send("Seu email está undefined!");
+    } else if (bairro == undefined) {
+        res.status(400).send("Sua senha está undefined!");
+    } else if (rua == undefined) {
+        res.status(400).send("Sua telefoneestá undefined!");
+    } else {
+
+        // Passe os valores como parâmetro e vá para o arquivo usuarioModel.js
+        await usuarioModel.cadastrarEndereco(cep, cidade, bairro, rua, nmrCasa, idUsuario)
+
+        res.status(200).json();
+    }
+}
+
+
+
 module.exports = {
     autenticar,
     cadastrar,
+    cadastrarEndereco
 }

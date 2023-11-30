@@ -57,6 +57,7 @@
         </div>
     </header>
     <main>
+        <span id="mensagemErro" style="display: none;"></span>
         <div class="menu-lateral">
             <div class="foto">
                 <img src="https://cdn-icons-png.flaticon.com/512/1547/1547183.png" alt="">
@@ -68,10 +69,7 @@
         </div>
         <div id="dados">
             <h2>Meus Dados</h2>
-            <!-- <input type="file" id="myFileInput">
-            <div class="nomeUsuario">
-                <img src="" id="imagemUser" style="width: 200px;" alt="">
-            </div> -->
+
             <div class="conteudoUsuario">
                 <div class="infoUsuario">
                     <h3>Nome:</h3>
@@ -88,7 +86,17 @@
                     <h3>Telefone:</h3>
                     <p id="b_telefone"></p>
                 </div>
-                <hr>
+                <hr class="marginB">
+                <div id="bxEn" class="enderecoBox">
+                    <input id="iptCep" type="text" placeholder="CEP"><span id="cepErro" style="display: none;">Cep precisa ter 8 dígitos</span>
+                    
+                    <input id="iptCidade" type="text" placeholder="CIDADDE">
+                    <input id="iptBairro" type="text" placeholder="BAIRRO">
+                    <input id="iptRua" type="text" placeholder="RUA">
+                    <input id="iptNumero" type="text" placeholder="NUMERO DA CASA">
+                    <button class="btnEndereco" onclick="cadastrarEndereco()">Cadastrar Endereço</button>
+                </div>
+                <div style="display: none;" id="mensagem_erro"></div>
             </div>
         </div>
         <div id="analytics">
@@ -122,33 +130,86 @@
 
     <footer>
         <div class="container">
-             <img src="./img/CodeCraft__2_-removebg-preview.png" alt="">
-             <div class="navegar">
-                 <p class="footerTitulo">Navegação</p>
-                 <ul>
-                     <li><a href="./index.html">HOME</a></li>
-                     <li><a href="#">HTML & CSS</a></li>
-                     <li><a href="#">QUIZ</a></li>
-                     <li><a href="#">SOBRE NÓS</a></li>
-                 </ul>
-             </div>
-             <div class="contato">
-                 <p class="footerTitulo">Contato</p>
-                 <i class='bx bxl-instagram'></i>
-                 <p class="footerTexto">codecraft@gmail.com</p>
-             </div>
-             <div class="criador">
-                 <p class="footerTitulo">Criador</p>
-                 <p class="footerTexto marginB">Igor Anthony De Jesus Maciel</p>
-                 <p class="footerTexto">Aluno da Sptech School</p>
-             </div>
+            <img src="./img/CodeCraft__2_-removebg-preview.png" alt="">
+            <div class="navegar">
+                <p class="footerTitulo">Navegação</p>
+                <ul>
+                    <li><a href="./index.html">HOME</a></li>
+                    <li><a href="#">HTML & CSS</a></li>
+                    <li><a href="#">QUIZ</a></li>
+                    <li><a href="#">SOBRE NÓS</a></li>
+                </ul>
+            </div>
+            <div class="contato">
+                <p class="footerTitulo">Contato</p>
+                <i class='bx bxl-instagram'></i>
+                <p class="footerTexto">codecraft@gmail.com</p>
+            </div>
+            <div class="criador">
+                <p class="footerTitulo">Criador</p>
+                <p class="footerTexto marginB">Igor Anthony De Jesus Maciel</p>
+                <p class="footerTexto">Aluno da Sptech School</p>
+            </div>
         </div>
-     </footer>
+    </footer>
     <script src="./js/header.js"></script>
 </body>
 
 </html>
 <script>
+    async function cadastrarEndereco() {
+        var cep = iptCep.value
+        var cidade = iptCidade.value
+        var bairro = iptBairro.value
+        var rua = iptRua.value
+        var nmrCasa = iptNumero.value
+
+
+        var idUsuario = sessionStorage.ID_USUARIO
+        if(cep.length == 8 && cidade != '' && bairro != '' && rua != '' && nmrCasa != ''){
+            var response = await fetch("/usuarios/cadastrarEndereco", {
+            method: "POST",
+            headers: {
+                "Content-Type": "application/json",
+            },
+            body: JSON.stringify({
+                cepServer: cep,
+                cidadeServer: cidade,
+                bairroServer: bairro,
+                ruaServer: rua,
+                nmrCasaServer: nmrCasa,
+                idUsuarioServer: idUsuario,
+            }),
+        });
+
+        if (response.ok) {
+            sessionStorage.setItem('CEP_USUARIO', cep);
+            cepErro.style.display = 'none'
+            
+            mensagemErro.style.display = 'flex'
+          mensagemErro.innerHTML =
+            `<i class='bx bx-checkbox-checked'></i>Endereço cadastrado com sucesso`;
+
+            setTimeout(()=>{
+                
+                window.location = "./conta.html";
+            },'2000')
+        }
+        
+        bxEn.style.display = 'none'
+        return false;
+        } else {
+            cepErro.style.display = 'block'
+            mensagemErro.style.display = 'block'
+          mensagemErro.innerHTML =
+            `Campos invalidos!`;
+            setTimeout(()=>{
+                mensagemErro.style.display = 'none'
+            },'4000')
+        }
+    }
+
+
     const dataDashboardHtml = {
         labels: [],
         datasets: [{
@@ -182,7 +243,7 @@
     }
 
     const options = {
-         
+
         scales: {
             x: {
                 grid: {

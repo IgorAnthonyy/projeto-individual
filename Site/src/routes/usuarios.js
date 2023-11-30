@@ -24,6 +24,9 @@ router.post("/analytics", function (req, res) {
 router.post("/analytics/dashboard", function (req, res) {
     quizController.pegarDadosQuiz(req, res);
 });
+router.post("/cadastrarEndereco", function (req, res) {
+    usuarioController.cadastrarEndereco(req, res);
+});
 
 
 module.exports = router;

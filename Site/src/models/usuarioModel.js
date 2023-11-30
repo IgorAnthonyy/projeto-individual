@@ -9,7 +9,7 @@ function autenticar(email, senha, idUsuario) {
 }
 
 function cadastrar(email, senha, nome, telefone) {
-    
+
     var instrucao = `
         INSERT INTO usuario (email, senha, nome ,telefone) VALUES ('${email}', '${senha}', '${nome}','${telefone}');
     `;
@@ -18,14 +18,28 @@ function cadastrar(email, senha, nome, telefone) {
 
 }
 
-    function consultarTelefone (email, senha){
+function consultarTelefone(email, senha) {
     var instrucao = `
         SELECT telefone FROM usuario WHERE email = '${email}' AND senha = '${senha}';
     `;
+
+
     return database.executar(instrucao);
 }
+
+function cadastrarEndereco(cep, cidade, bairro, rua, nmrCasa, idUsuario) {
+
+    var instrucao = `
+        INSERT INTO endereco (cep, cidade, bairro ,rua, nmrCasa, fkUsuario) VALUES ('${cep}', '${cidade}', '${bairro}','${rua}','${nmrCasa}',${idUsuario});
+    `;
+
+    return database.executar(instrucao);
+}
+
 module.exports = {
     autenticar,
     cadastrar,
     consultarTelefone,
+    cadastrarEndereco
 };
+
