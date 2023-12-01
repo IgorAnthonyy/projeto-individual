@@ -146,7 +146,8 @@
                 });
 
             } else {
-
+                mensagem_erro.style.display = "flex"
+                    mensagem_erro.innerHTML = "<i class='bx bx-error-circle'></i>Usuário Inválido";
                 console.log("Houve um erro ao tentar realizar o login!");
 
                 resposta.text().then(texto => {

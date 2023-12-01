@@ -212,7 +212,8 @@
 
     const dataDashboardHtml = {
         labels: [],
-        datasets: [{
+        datasets: [
+        {
             label: 'Acertos',
             backgroundColor: '#00d9ff',
             data: [],
@@ -325,24 +326,26 @@
 
         var response = await resultadoDashboard.json();
 
-        onUpdateChartHtml(response);
-        onUpdateChartCSS(response);
+        atualizandoGraficoHtml(response);
+        atualizandoGraficoCss(response);
     }
 
-    const onUpdateChartHtml = ({ dadosQuizHtml }) => {
+    const atualizandoGraficoHtml = ({ dadosQuizHtml }) => {
         var labels = dadosQuizHtml.map((args, index) => `Tentativa - ${index + 1}`)
-
+        // Separa os acertos e erros em arrays individuais 
         var acertosHtml = dadosQuizHtml.map(args => args.qtdAcertosHtml);
         var errosHtml = dadosQuizHtml.map(args => args.qtdErrosHtml);
-
+        
         dataDashboardHtml.labels = labels;
+        // atribui os dados no grafico
         dataDashboardHtml.datasets[0].data = acertosHtml;
         dataDashboardHtml.datasets[1].data = errosHtml;
 
+        //atualiza o grafico com os novos valores
         htmlChart.update();
     };
 
-    const onUpdateChartCSS = ({ dadosQuizCss }) => {
+    const atualizandoGraficoCss = ({ dadosQuizCss }) => {
         var labels = dadosQuizCss.map((args, index) => `Tentativa - ${index + 1}`)
 
         var acertosCss = dadosQuizCss.map(args => args.qtdAcertosCss);
